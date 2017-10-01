@@ -1,0 +1,36 @@
+/* pages/about/about.wxss */
+
+.text11{
+  font-size: 14px;
+  color: #888888;
+  margin: 120rpx ;
+  text-align: center;  
+}
+.update{
+  font-size: 16px;
+  color: #888888;
+  font-weight: bolder;
+}
+.up1{
+  font-size: 12px;
+  color: #888888;
+  margin: 20rpx;
+}
+.copy{
+  font-size: 10px;
+  text-align: center;
+  color: #888888;
+  position: fixed;
+  bottom: 10rpx;
+  left: 25%;
+
+}
+.gxuann{
+width: 30px;
+height: 30px;
+}
+.up2{
+  font-size: 12px;
+  color: #888888;
+  margin: 20rpx;
+}

@@ -1,0 +1,32 @@
+
+
+<view class="text11">
+  <view class="section__title"></view>
+  <view class="flex-wrp" style="height: 40px;flex-direction:column;">
+    <view class="flex-item">使用这个小程序可以轻松生成二维码。</view>
+    <view class="flex-item">可以输入任何数据，网址、文字、字符、中文、anything...(最大长度:255字符)</view>
+    <view class="flex-item" style='margin:10px'>Enjoy :-)</view>
+  </view>
+</view>
+<view class="update">Update.log</view>
+  <view class="up1">
+    <view class="section__title">Ver1.0</view>
+    <view class="flex-wrp" style="flex-direction:column;">
+    <view class="flex-item bc_green">1.已知bug：二维码暂不可保存，请截图保存。</view>
+  </view>
+</view>
+<view class="update"></view>
+  <view class="up2">
+    <view class="section__title">Ver1.1</view>
+    <view class="flex-wrp" style="flex-direction:column;">
+    <view class="flex-item bc_green">1.修复文本错误。</view>
+  </view>
+</view>
+<view class="copy">
+  <view class="flex-wrp" style="flex-direction:column;">
+  <view class="flex-item bc_green">点击二维码保存到相册，扫一扫即可关注</view>
+  <image src='/images/gxuann.jpg' class="gxuann" bindtap='listenerChooseImage'></image>
+    <view class="flex-item bc_green">作者:GuangXuan</view>
+    <view class="flex-item bc_green">公众号:GXUANN</view>
+  </view>
+</view>
