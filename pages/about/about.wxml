@@ -3,8 +3,7 @@
 <view class="text11">
   <view class="section__title"></view>
   <view class="flex-wrp" style="height: 40px;flex-direction:column;">
-    <view class="flex-item">使用这个小程序可以轻松生成二维码。</view>
-    <view class="flex-item">可以输入任何数据，网址、文字、字符、中文、anything...(最大长度:255字符)</view>
+    <view class="flex-item">使用这个小程序可以轻松地将任何数据转换成二维码。</view>
     <view class="flex-item" style='margin:10px'>Enjoy :-)</view>
   </view>
 </view>
@@ -27,8 +26,18 @@
     <view class="up2">
       <view class="section__title">Ver2.0</view>
       <view class="flex-wrp" style="flex-direction:column;">
-      <view class="flex-item bc_green">1.增加二维码保存按钮，点击即可保存至手机相册。</view>
-      <view class="flex-item bc_green">2.修改用户界面，提高易用性。</view>
+      <view class="flex-item bc_green">1.修复最初版本的bug</view>
+      <view class="flex-item bc_green">2.增加图片预览功能，可直接分享给好友。</view>
+      <view class="flex-item bc_green">3.增加二维码保存按钮，点击即可保存至手机相册。</view>
+      <view class="flex-item bc_green"></view>
+    </view>
+  </view>
+  <view class="update"></view>
+    <view class="up2">
+      <view class="section__title">Ver2.1</view>
+      <view class="flex-wrp" style="flex-direction:column;">
+      <view class="flex-item bc_green">1.修改用户界面，易用性提高。</view>
+      <view class="flex-item bc_green">2.修复一些错误。</view>
     </view>
   </view>
 

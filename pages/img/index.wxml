@@ -1,0 +1,13 @@
+
+<view class="container-box">
+    <view class="img-box">
+        <canvas bindtap="previewImg" hidden="{{canvasHidden}}" style="width:686rpx; height: 686rpx;background:#efeff4;" canvas-id="mycanvas"/>
+        <icon type='info'  size='15'></icon>
+        <text class="text">二维码生成成功！你可以点击图片进入预览后，长按可直接分享给好友。也可以点击下方的按钮将二维码永久保存至手机相册</text>
+
+        <button class="bc" type="primary" bindtap="listenerChooseImage" >保存二维码至相册</button>
+    </view>
+
+</view>
+<view hidden="{{maskHidden}}" class="mask"></view>
+<view class="canvas-box"></view>

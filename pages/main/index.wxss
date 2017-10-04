@@ -1,5 +1,5 @@
-/* pages/main/index.wxss */
-.container-box{background-color: #efeff4;height: 100vh}
+
+.container-box{background-color: #efeff4}
 .img-box{padding: 32rpx;background-color: #fff;border-bottom: 1rpx solid #e5e5e5;position: relative}
 .img-box image{width: 686rpx;height: 686rpx;background-color: #f9f9f9}
 .input-row{
@@ -8,7 +8,8 @@
     border-top: 1rpx solid #e5e5e5;
     display: flex;
     align-items: center;
-    height: 88rpx;
+    height: 450rpx;
+    width: 80%;
     padding: 0 32rpx; 
     background-color: #fff;
     font-size: 34rpx;

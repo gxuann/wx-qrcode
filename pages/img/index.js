@@ -5,7 +5,6 @@ Page({
     maskHidden:true,
     imagePath:'',
     placeholder:'',//默认二维码生成文本
-
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
@@ -75,15 +74,11 @@ Page({
     that.setData({
       maskHidden:false,
     });
-
-      wx.navigateTo({
-        url: '/pages/img/index'
-      });
-      wx.showToast({
-        title: '生成中...',
-        icon: 'loading',
-        duration: 2000
-      });
+    wx.showToast({
+      title: '生成中...',
+      icon: 'loading',
+      duration:2000
+    });
     var st = setTimeout(function(){
       wx.hideToast()
       var size = that.setCanvasSize();
