@@ -11,7 +11,24 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs);
+
+    wx.getSetting({
+      success(res){
+        if (!res.authSetting['scope.writePhotosAlbum']){
+          wx.authorize({
+            scope: 'scope.writePhotosAlbum',
+            success(){
+              console.log('成功')
+            },
+            fail(){
+              console.log('失败')
+            },
+          })
+        }
+      }
+    })
   },
+
   getUserInfo:function(cb){
     var that = this
     if(this.globalData.userInfo){

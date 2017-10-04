@@ -1,16 +1,17 @@
 <!--pages/main/index.wxml-->
 <view class="container-box">
     <view class="img-box">
-        <canvas bindtap="previewImg" hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas"/>
+        <canvas bindtap="previewImg" hidden="{{canvasHidden}}" style="width:686rpx; height: 686rpx;background:#ffffff;" canvas-id="mycanvas"/>
+        <button class="bc" type="default" bindtap="listenerChooseImage" disabled='{{disabled}}'>保存二维码至相册</button>
     </view>
     <form bindsubmit="formSubmit">
         <view class="input-row">
             <label>数据</label>
             <input name='url' value='' type="text" maxlength="255" placeholder="{{placeholder}}"/>
         </view>
-
         <button formType="submit" class="mybtn" type="primary">生成二维码</button>
     </form>
+
 </view>
 <view hidden="{{maskHidden}}" class="mask"></view>
 <view class="canvas-box"></view>

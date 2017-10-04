@@ -8,21 +8,33 @@
     <view class="flex-item" style='margin:10px'>Enjoy :-)</view>
   </view>
 </view>
-<view class="update">Update.log</view>
-  <view class="up1">
-    <view class="section__title">Ver1.0</view>
-    <view class="flex-wrp" style="flex-direction:column;">
-    <view class="flex-item bc_green">1.已知bug：二维码暂不可保存，请截图保存。</view>
+<scroll-view class="scroll-view">
+  <view class="update">Update.log</view>
+    <view class="up1">
+      <view class="section__title">Ver1.0</view>
+      <view class="flex-wrp" style="flex-direction:column;">
+      <view class="flex-item bc_green">1.已知bug：二维码暂不可保存，请截图保存。</view>
+    </view>
   </view>
-</view>
-<view class="update"></view>
-  <view class="up2">
-    <view class="section__title">Ver1.1</view>
-    <view class="flex-wrp" style="flex-direction:column;">
-    <view class="flex-item bc_green">1.修复文本错误。</view>
+  <view class="update"></view>
+    <view class="up2">
+      <view class="section__title">Ver1.1</view>
+      <view class="flex-wrp" style="flex-direction:column;">
+      <view class="flex-item bc_green">1.修复文本错误。</view>
+    </view>
   </view>
-</view>
+  <view class="update"></view>
+    <view class="up2">
+      <view class="section__title">Ver2.0</view>
+      <view class="flex-wrp" style="flex-direction:column;">
+      <view class="flex-item bc_green">1.增加二维码保存按钮，点击即可保存至手机相册。</view>
+      <view class="flex-item bc_green">2.修改用户界面，提高易用性。</view>
+    </view>
+  </view>
+
+</scroll-view>
 <view class="copy">
+  <view class="line"></view>
   <view class="flex-wrp" style="flex-direction:column;">
   <view class="flex-item bc_green">点击二维码保存到相册，扫一扫即可关注</view>
   <image src='/images/gxuann.jpg' class="gxuann" bindtap='listenerChooseImage'></image>

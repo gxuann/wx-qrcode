@@ -4,7 +4,8 @@ Page({
   data:{
     maskHidden:true,
     imagePath:'',
-    placeholder:'https://gxuann.cn/'//默认二维码生成文本
+    placeholder:'https://gxuann.cn/',//默认二维码生成文本
+    disabled:true,
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
@@ -67,28 +68,13 @@ Page({
       }
     });
   },
-  //点击图片进行预览，长按保存分享图片
-  previewImg:function(e){
-    wx.canvasToTempFilePath({
-      canvasId: 'mycanvas',
-      success: function (res) {
-          var tempFilePath = res.tempFilePath;
-					wx.previewImage({
-      			current: tempFilePath, // 当前显示图片的http链接
-      			urls: tempFilePath // 需要预览的图片http链接列表
-    			})
-      },
-      fail: function (res) {
-          console.log(res);
-      }
-    });
-    
-  },
+
   formSubmit: function(e) {
     var that = this;
     var url = e.detail.value.url;
     that.setData({
       maskHidden:false,
+      disabled: false,
     });
     wx.showToast({
       title: '生成中...',
@@ -116,6 +102,35 @@ Page({
       path: '/pages/main/index',
       imageUrl: '/images/logo.png'
     }
-  }
+  },
+
+listenerChooseImage: function (e) {
+    wx.canvasToTempFilePath({
+      canvasId: 'mycanvas',
+      success: function (res) {
+        var tempFilePath = res.tempFilePath;
+        wx.saveImageToPhotosAlbum({
+          filePath: res.tempFilePath,
+          success: function (data) {
+            console.log(data);
+            wx.showModal({
+              title: '提示',
+              content: '保存成功',
+              showCancel:false,
+              confirmText:'确认',
+            })
+          },
+          fail: function (err) {
+            console.log(err);
+          }
+        })
+      },
+      fail: function (res) {
+        console.log(res);
+      }
+    });
+
+  },
 
 })
+
