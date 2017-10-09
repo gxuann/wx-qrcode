@@ -12,11 +12,7 @@ Page({
     
 
   },
-  onReady:function(){
-  	var size = this.setCanvasSize();//动态设置画布大小
-    var initUrl = this.data.placeholder;
-    this.createQrCode(initUrl,"mycanvas",size.w,size.h);
-  },
+
   onShow:function(){
     
     // 页面显示
@@ -30,21 +26,7 @@ Page({
 
   },
   //适配不同屏幕大小的canvas
-  setCanvasSize:function(){
-    var size={};
-    try {
-        var res = wx.getSystemInfoSync();
-        var scale = 750/686;//不同屏幕下canvas的适配比例；设计稿是750宽
-        var width = res.windowWidth/scale;
-        var height = width;//canvas画布为正方形
-        size.w = width;
-        size.h = height;
-      } catch (e) {
-        // Do something when catch error
-        console.log("获取设备信息失败"+e);
-      } 
-    return size;
-  } ,
+
   createQrCode:function(url,canvasId,cavW,cavH){
     //调用插件中的draw方法，绘制二维码图片
     QR.qrApi.draw(url,canvasId,cavW,cavH);
@@ -67,29 +49,34 @@ Page({
       }
     });
   },
-
-  formSubmit: function(e) {
+  formSubmit: function (e) {
     var that = this;
     var url = e.detail.value.url;
     that.setData({
-      maskHidden:false,
+      maskHidden: false,
     });
-    wx.showToast({
-      title: '生成中...',
-      icon: 'loading',
-      duration:2000
+
+    wx.navigateTo({
+      url: '/pages/img/index'
     });
-    var st = setTimeout(function(){
+    wx.showLoading({
+      title: '生成中……',
+    })
+
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 2000)
+    var st = setTimeout(function () {
       wx.hideToast()
       var size = that.setCanvasSize();
       //绘制二维码
-      that.createQrCode(url,"mycanvas",size.w,size.h);
+      that.createQrCode(url, "mycanvas", size.w, size.h);
       that.setData({
-        maskHidden:true
+        maskHidden: true
       });
       clearTimeout(st);
-    },2000)
-    
+    }, 2000)
+
   },
   /**
    * 用户点击右上角分享
@@ -146,6 +133,10 @@ previewImg: function (e) {
   });
 
 },
-
+listenerback:function(e){
+  wx.reLaunch({
+    url: '/pages/main/index'
+  })
+},
 })
 

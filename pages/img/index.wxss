@@ -5,6 +5,7 @@
 
 
 .bc{width: 686rpx;height:30%;margin: 30rpx auto}
+.bk{width: 686rpx;height:30%;margin: 30rpx auto}
 
 .mask{position: fixed;top: 0;left: 0;z-index: 3; width: 100%;height: 100%;opacity: 0;}
 .text{

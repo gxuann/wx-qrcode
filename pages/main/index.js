@@ -79,11 +79,13 @@ Page({
       wx.navigateTo({
         url: '/pages/img/index'
       });
-      wx.showToast({
-        title: '生成中...',
-        icon: 'loading',
-        duration: 2000
-      });
+      wx.showLoading({
+        title: '生成中……',
+      })
+
+      setTimeout(function () {
+        wx.hideLoading()
+      }, 2000)
     var st = setTimeout(function(){
       wx.hideToast()
       var size = that.setCanvasSize();

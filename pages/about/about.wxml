@@ -9,17 +9,22 @@
 </view>
 <scroll-view class="scroll-view">
   <view class="update">Update.log</view>
-    <view class="up1">
-      <view class="section__title">Ver1.0</view>
+
+
+  <view class="update"></view>
+    <view class="up2">
+      <view class="section__title">Ver2.2</view>
       <view class="flex-wrp" style="flex-direction:column;">
-      <view class="flex-item bc_green">1.已知bug：二维码暂不可保存，请截图保存。</view>
+      <view class="flex-item bc_green">1.修复ShowLoading显示的bug。</view>
+      <view class="flex-item bc_green">2.修改用户界面。</view>
     </view>
   </view>
   <view class="update"></view>
     <view class="up2">
-      <view class="section__title">Ver1.1</view>
+      <view class="section__title">Ver2.1</view>
       <view class="flex-wrp" style="flex-direction:column;">
-      <view class="flex-item bc_green">1.修复文本错误。</view>
+      <view class="flex-item bc_green">1.修改用户界面，易用性提高。</view>
+      <view class="flex-item bc_green">2.修复一些错误。</view>
     </view>
   </view>
   <view class="update"></view>
@@ -34,10 +39,15 @@
   </view>
   <view class="update"></view>
     <view class="up2">
-      <view class="section__title">Ver2.1</view>
+      <view class="section__title">Ver1.1</view>
       <view class="flex-wrp" style="flex-direction:column;">
-      <view class="flex-item bc_green">1.修改用户界面，易用性提高。</view>
-      <view class="flex-item bc_green">2.修复一些错误。</view>
+      <view class="flex-item bc_green">1.修复文本错误。</view>
+    </view>
+  </view>
+    <view class="up1">
+      <view class="section__title">Ver1.0</view>
+      <view class="flex-wrp" style="flex-direction:column;">
+      <view class="flex-item bc_green">1.已知bug：二维码暂不可保存，请截图保存。</view>
     </view>
   </view>
 
@@ -49,5 +59,6 @@
   <image src='/images/gxuann.jpg' class="gxuann" bindtap='listenerChooseImage'></image>
     <view class="flex-item bc_green">作者:GuangXuan</view>
     <view class="flex-item bc_green">公众号:GXUANN</view>
+    <view class="flex-item bc_green">GitHub:guangxuan126</view>
   </view>
 </view>
