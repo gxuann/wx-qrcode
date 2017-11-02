@@ -10,8 +10,8 @@
 <textarea name="detail" type="text" maxlength="-1" placeholder="请在这里输入反馈内容" value='{{detail}}'></textarea>
   </view>
   <view class="input-row">
-    <view class="section__title">邮箱丨</view>
-    <input name="email" placeholder="" value='{{email}}' />
+
+    <input name="email" placeholder="邮箱" value='{{email}}' />
   </view>
 
   <view class="btn-area">
