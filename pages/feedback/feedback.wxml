@@ -1,0 +1,23 @@
+<!--pages/feedback/feedback.wxml-->
+<form bindsubmit="formBindsubmit" bindreset="formReset">
+<view class="text11">
+  <view class="section__title"></view>
+  <view class="flex-wrp" style="height: 40px;flex-direction:column;">
+    
+<view class="flex-item"><icon type='info'  size='17'></icon>为了帮助我提高这个小程序的质量，如果你发现了任何bug或者有其他建议的话，欢迎在这里提出,如果可以的话，请在下面留下你的邮箱~</view>
+  </view>
+</view>
+  <view class="input-area">
+<textarea name="detail" type="text" maxlength="-1" placeholder="请在这里输入反馈内容" value='{{detail}}'></textarea>
+  </view>
+  <view class="input-row">
+    <view class="section__title">邮箱丨</view>
+    <input name="email" placeholder="" value='{{email}}' />
+  </view>
+
+  <view class="btn-area">
+      <button formType="submit" type="primary">提交</button>
+      <button formType="reset">重置</button>
+  </view>
+  <button class="backto" bindtap="listenerbackto">返回</button>
+</form>

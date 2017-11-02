@@ -153,6 +153,10 @@ previewImg: function (e) {
   });
 
 },
-
+listenerfeedback: function (e) {
+  wx.reLaunch({
+    url: '/pages/feedback/feedback'
+  })
+},
 })
 
