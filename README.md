@@ -30,6 +30,9 @@ V2.2<br>
 1.修复ShowLoading显示的bug。<br>
 2.修改用户界面。<br>
 
+V2.3<br>
+1.增加反馈功能。<br>
+
 ---
 
 <br>
