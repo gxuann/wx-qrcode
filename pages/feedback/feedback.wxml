@@ -6,6 +6,7 @@
   </view>
 
   <view class="input-area">
+  <view class="section__title">内容</view>
 <textarea name="detail" type="text" maxlength="-1" placeholder="请在这里输入反馈内容" value='{{detail}}'></textarea>
   </view>
   <view class="input-row">
