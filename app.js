@@ -1,7 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
-    require('./sdk-v1.1.0')
+    require('./sdk-v1.1.1')
 
     let clientId = '26b08429525c546e39f9' // 从 baas 后台获取
 
@@ -13,14 +13,14 @@ App({
     wx.setStorageSync('logs', logs);
 
     wx.getSetting({
-      success(res){
-        if (!res.authSetting['scope.writePhotosAlbum']){
+      success(res) {
+        if (!res.authSetting['scope.writePhotosAlbum']) {
           wx.authorize({
             scope: 'scope.writePhotosAlbum',
-            success(){
+            success() {
               console.log('成功')
             },
-            fail(){
+            fail() {
               console.log('失败')
             },
           })
@@ -29,11 +29,11 @@ App({
     })
   },
 
-  getUserInfo:function(cb){
+  getUserInfo: function (cb) {
     var that = this
-    if(this.globalData.userInfo){
+    if (this.globalData.userInfo) {
       typeof cb == "function" && cb(this.globalData.userInfo)
-    }else{
+    } else {
       //调用登录接口
       wx.login({
         success: function () {
@@ -47,8 +47,8 @@ App({
       })
     }
   },
-  globalData:{
-    
-    userInfo:null
+  globalData: {
+
+    userInfo: null
   }
 })

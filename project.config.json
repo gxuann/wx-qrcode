@@ -1,34 +1,35 @@
 {
-	"description": "项目配置文件。",
-	"setting": {
-		"urlCheck": true,
-		"es6": true,
-		"postcss": true,
-		"minified": true
-	},
-	"compileType": "weapp",
-	"libVersion": "1.5.4",
-	"appid": "wx787e617292200efe",
-	"projectname": "QR%E4%BA%8C%E7%BB%B4%E7%A0%81",
-	"condition": {
-		"weapp": {
-			"current": 0,
-			"list": [
-				{
-					"id": -1,
-					"name": "feedback",
-					"pathName": "pages/feedback/feedback",
-					"query": ""
-				}
-			]
-		},
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		}
-	}
+  "description": "项目配置文件。",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "1.5.4",
+  "appid": "wx787e617292200efe",
+  "projectname": "QR%E4%BA%8C%E7%BB%B4%E7%A0%81",
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": 0,
+      "list": [
+        {
+          "id": -1,
+          "name": "feedback",
+          "pathName": "pages/feedback/feedback",
+          "query": ""
+        }
+      ]
+    }
+  }
 }

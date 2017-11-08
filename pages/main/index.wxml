@@ -1,12 +1,11 @@
-
 <view class="container-box">
 
-    <form bindsubmit="formSubmit">
-        <view class="input-row">
-            <textarea name='url' value='' type="text" maxlength="255" placeholder="请在这里输入需要转换的数据，不支持图片和emoji表情（255字符内）"/>
-            
-        </view>
-        <button formType="submit" class="mybtn" type="primary">生成二维码</button>
-    </form>
-    <button class="feedback" bindtap="listenerfeedback">反馈</button>
+  <form bindsubmit="formSubmit">
+    <view class="input-row">
+      <textarea name='url' value='' type="text" maxlength="255" placeholder="请在这里输入需要转换的数据，不支持图片和emoji表情（255字符内）" />
+
+    </view>
+    <button formType="submit" class="mybtn" type="primary">生成二维码</button>
+  </form>
+  <button class="feedback" bindtap="listenerfeedback">反馈</button>
 </view>

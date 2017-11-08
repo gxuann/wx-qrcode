@@ -1,48 +1,54 @@
 /* pages/feedback/feedback.wxss */
-.input-row{
-    margin: 20rpx auto;
-    border-bottom: 1rpx solid #e5e5e5;
-    border-top: 1rpx solid #e5e5e5;
-    display: flex;
-    align-items: center;
-    height: 100rpx;
-    width: 80%;
-    padding: 0 32rpx; 
-    background-color: #fff;
-    font-size: 30rpx;
-    color: #000
+
+.input-row {
+  margin: 20rpx auto;
+  border-bottom: 1rpx solid #e5e5e5;
+  border-top: 1rpx solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  width: 80%;
+  padding: 0 32rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+  color: #000;
 }
-.input-area{
-    margin: 30rpx auto;
-    border-bottom: 1rpx solid #e5e5e5;
-    border-top: 1rpx solid #e5e5e5;
-    display: flex;
-    align-items: center;
-    height: 400rpx;
-    width: 80%;
-    padding: 0 32rpx; 
-    background-color: #fff;
-    font-size: 30rpx;
-    color: #000
+
+.input-area {
+  margin: 30rpx auto;
+  border-bottom: 1rpx solid #e5e5e5;
+  border-top: 1rpx solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  height: 400rpx;
+  width: 80%;
+  padding: 0 32rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+  color: #000;
 }
-.text11{
+
+.text11 {
   font-size: 14px;
-  color: #888888;
-  margin: 50rpx ;
-  text-align: center;  
+  color: #888;
+  margin: 50rpx;
+  text-align: center;
 }
-.input-tip{
+
+.input-tip {
   font-size: 14px;
-  color: #888888;
-  text-align: center;  
+  color: #888;
+  text-align: center;
 }
-.btn-area{
-  width:90%;
-  padding: 0 32rpx; 
+
+.btn-area {
+  width: 90%;
+  padding: 0 32rpx;
   margin: 40rpx auto;
 }
-.backto{
-  width:90%;
-  padding: 0 32rpx; 
+
+.backto {
+  width: 90%;
+  padding: 0 32rpx;
   margin: 40rpx auto;
 }

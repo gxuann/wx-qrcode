@@ -1,51 +1,51 @@
 // pages/main/index.js
 var QR = require("../../utils/qrcode.js");
 Page({
-  data:{
-    maskHidden:true,
-    imagePath:'',
-    placeholder:'',//默认二维码生成文本
+  data: {
+    maskHidden: true,
+    imagePath: '',
+    placeholder: '',//默认二维码生成文本
   },
-  onLoad:function(options){
+  onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
-    
-    
+
+
 
   },
 
-  onShow:function(){
-    
+  onShow: function () {
+
     // 页面显示
   },
-  onHide:function(){
+  onHide: function () {
     // 页面隐藏
   },
 
-  onUnload:function(){
+  onUnload: function () {
     // 页面关闭
 
   },
   //适配不同屏幕大小的canvas
 
-  createQrCode:function(url,canvasId,cavW,cavH){
+  createQrCode: function (url, canvasId, cavW, cavH) {
     //调用插件中的draw方法，绘制二维码图片
-    QR.qrApi.draw(url,canvasId,cavW,cavH);
+    QR.qrApi.draw(url, canvasId, cavW, cavH);
 
   },
   //获取临时缓存照片路径，存入data中
-  canvasToTempImage:function(){
+  canvasToTempImage: function () {
     var that = this;
     wx.canvasToTempFilePath({
       canvasId: 'mycanvas',
       success: function (res) {
-          var tempFilePath = res.tempFilePath;
-          console.log("********"+tempFilePath);
-          that.setData({
-              imagePath:tempFilePath,
-          });
+        var tempFilePath = res.tempFilePath;
+        console.log("********" + tempFilePath);
+        that.setData({
+          imagePath: tempFilePath,
+        });
       },
       fail: function (res) {
-          console.log(res);
+        console.log(res);
       }
     });
   },
@@ -89,7 +89,7 @@ Page({
     }
   },
 
-listenerChooseImage: function (e) {
+  listenerChooseImage: function (e) {
     wx.canvasToTempFilePath({
       canvasId: 'mycanvas',
       success: function (res) {
@@ -101,8 +101,8 @@ listenerChooseImage: function (e) {
             wx.showModal({
               title: '提示',
               content: '保存成功',
-              showCancel:false,
-              confirmText:'确认',
+              showCancel: false,
+              confirmText: '确认',
             })
           },
           fail: function (err) {
@@ -117,26 +117,26 @@ listenerChooseImage: function (e) {
 
   },
 
-previewImg: function (e) {
-  wx.canvasToTempFilePath({
-    canvasId: 'mycanvas',
-    success: function (res) {
-      var tempFilePath = res.tempFilePath;
-      wx.previewImage({
-        current: tempFilePath, // 当前显示图片的http链接
-        urls: [tempFilePath] // 需要预览的图片http链接列表
-      })
-    },
-    fail: function (res) {
-      console.log(res);
-    }
-  });
+  previewImg: function (e) {
+    wx.canvasToTempFilePath({
+      canvasId: 'mycanvas',
+      success: function (res) {
+        var tempFilePath = res.tempFilePath;
+        wx.previewImage({
+          current: tempFilePath, // 当前显示图片的http链接
+          urls: [tempFilePath] // 需要预览的图片http链接列表
+        })
+      },
+      fail: function (res) {
+        console.log(res);
+      }
+    });
 
-},
-listenerback:function(e){
-  wx.reLaunch({
-    url: '/pages/main/index'
-  })
-},
+  },
+  listenerback: function (e) {
+    wx.reLaunch({
+      url: '/pages/main/index'
+    })
+  },
 })
 
