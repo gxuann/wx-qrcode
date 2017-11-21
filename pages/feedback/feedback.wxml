@@ -15,8 +15,9 @@
   </view>
 
   <view class="btn-area">
-    <button formType="submit" type="primary">提交</button>
-    <button formType="reset">重置</button>
-  </view>
+    <button class="sub" formType="submit" type="primary">提交</button>
+    <button class="reset" formType="reset">重置</button>
+  
   <button class="backto" bindtap="listenerbackto">返回</button>
+  </view>
 </form>

@@ -10,7 +10,14 @@
 <scroll-view class="scroll-view">
   <view class="update">Update.log</view>
 
-
+  <view class="update"></view>
+    <view class="up2">
+      <view class="section__title">Ver2.4</view>
+      <view class="flex-wrp" style="flex-direction:column;">
+      <view class="flex-item bc_green">1.细节调整。</view>
+      <view class="flex-item bc_green"></view>
+    </view>
+  </view>
   <view class="update"></view>
     <view class="up2">
       <view class="section__title">Ver2.3</view>
@@ -63,7 +70,6 @@
 <view class="copy">
   <view class="line"></view>
   <view class="flex-wrp" style="flex-direction:column;">
-  <view class="flex-item bc_green">点击二维码保存到相册，扫一扫即可关注</view>
   <image src='/images/gxuann.jpg' class="gxuann" bindtap='listenerChooseImage'></image>
     <view class="flex-item bc_green">作者:GuangXuan</view>
     <view class="flex-item bc_green">GitHub:guangxuan126</view>
