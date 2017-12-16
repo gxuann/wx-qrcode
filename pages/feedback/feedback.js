@@ -72,7 +72,7 @@ Page({
         showCancel: false,
       })
     } else {
-      let tableID = 2991
+      let tableID = 4014
       let Product = new wx.BaaS.TableObject(tableID)
       let product = Product.create()
       product.set('email', e.detail.value.email)

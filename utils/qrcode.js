@@ -770,6 +770,9 @@ var QR = (function () {
       ctx.setFillStyle('#f1f1f1')
       ctx.fillRect(0, 0, cavW, cavH)
       ctx.setFillStyle('#000000');
+      ctx.setFontSize(20)
+      ctx.setTextAlign('center')
+      ctx.fillText('<> by QR二维码', cavW/2,cavH-20)
       for (var i = 0; i < width; i++) {
         for (var j = 0; j < width; j++) {
           if (frame[j * width + i]) {

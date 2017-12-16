@@ -3,7 +3,7 @@ App({
   onLaunch: function () {
     require('./sdk-v1.1.1')
 
-    let clientId = '26b08429525c546e39f9' // 从 baas 后台获取
+    let clientId = '3340784c73954a8d1c2b' // 从 baas 后台获取
 
     // initialize
     wx.BaaS.init(clientId)
