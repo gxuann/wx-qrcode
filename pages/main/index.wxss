@@ -1,3 +1,5 @@
+
+
 .container-box {
   background-color: #efeff4;
 }
@@ -42,6 +44,18 @@
 .feedback {
   width: 686rpx;
   margin: 40rpx auto;
+}
+
+.ntext{
+  background-color: #fff;  
+  width: 686rpx;
+  margin: auto auto;
+  border-radius: 5px
+}
+.textdetail{
+  font-size: 12px;
+  color: #888888;
+  margin: 5rpx;
 }
 
 .bc {

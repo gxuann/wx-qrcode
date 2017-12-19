@@ -1,26 +1,44 @@
 // pages/main/index.js
 var QR = require("../../utils/qrcode.js");
+let tittle = '正在等待服务器公告...\n';
+let detail = '';
+
 Page({
   data: {
     maskHidden: true,
     imagePath: '',
     placeholder: '',//默认二维码生成文本
-
+    text: tittle,
+    detail:detail,
   },
+
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
-
-
 
   },
   onReady: function () {
     var size = this.setCanvasSize();//动态设置画布大小
     var initUrl = this.data.placeholder;
     this.createQrCode(initUrl, "mycanvas", size.w, size.h);
+
+    
   },
   onShow: function () {
-
     // 页面显示
+    let tableID = 4058
+    let recordID = '5a37622c09a80544e308946e'
+
+    let Product = new wx.BaaS.TableObject(tableID)
+    Product.get(recordID).then((res) => {
+      // success
+      var that = this;
+      that.setData({
+      detail: res.data.detail
+      })
+      console.log(res.data.detail)
+    }, (err) => {
+      // err
+    })
   },
   onHide: function () {
     // 页面隐藏
