@@ -52,6 +52,14 @@
   margin: auto auto;
   border-radius: 5px
 }
+
+.texttittle{
+  font-size: 12px;
+  color: #888888;
+  margin: 5rpx;
+  text-align: center;
+}
+
 .textdetail{
   font-size: 12px;
   color: #888888;

@@ -8,14 +8,14 @@
   </view>
 </view>
 <scroll-view class="scroll-view">
-  <view class="update">Update.log</view>
+  <view class="update">ChangeLog</view>
 
   <view class="update"></view>
     <view class="up2">
       <view class="section__title">Ver2.5</view>
       <view class="flex-wrp" style="flex-direction:column;">
       <view class="flex-item bc_green">1.修复反馈功能提交失败的bug。</view>
-      <view class="flex-item bc_green">2.添加服务器通知框。</view>
+      <view class="flex-item bc_green">2.添加公告牌。</view>
       <view class="flex-item bc_green"></view>
     </view>
   </view>

@@ -1,6 +1,6 @@
 // pages/main/index.js
 var QR = require("../../utils/qrcode.js");
-let tittle = '正在等待服务器公告...\n';
+let tittle = '公告牌\n';
 let detail = '';
 
 Page({
@@ -9,7 +9,7 @@ Page({
     imagePath: '',
     placeholder: '',//默认二维码生成文本
     text: tittle,
-    detail:detail,
+    detail: detail,
   },
 
   onLoad: function (options) {
@@ -21,7 +21,7 @@ Page({
     var initUrl = this.data.placeholder;
     this.createQrCode(initUrl, "mycanvas", size.w, size.h);
 
-    
+
   },
   onShow: function () {
     // 页面显示
@@ -33,11 +33,12 @@ Page({
       // success
       var that = this;
       that.setData({
-      detail: res.data.detail
+        detail: res.data.detail
       })
       console.log(res.data.detail)
     }, (err) => {
       // err
+      console.log("err")
     })
   },
   onHide: function () {

@@ -12,7 +12,9 @@
 
 <view class="ntext">
   <view class="body-view">
-    <text class='textdetail'>{{text}}</text>
+    <view class='texttittle'>
+      <text class='texttittle'>{{text}}</text>
+    </view>
     <text class='textdetail'>{{detail}}</text>
   </view>
 </view>
