@@ -75,6 +75,7 @@ Page({
       wx.showModal({
         content: '内容不能为空！',
         showCancel: false,
+        confirmText:"知道了",
       })
     } else {
       var that = this;

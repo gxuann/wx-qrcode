@@ -770,6 +770,11 @@ var QR = (function () {
       ctx.setFillStyle('#f1f1f1')
       ctx.fillRect(0, 0, cavW, cavH)
       ctx.setFillStyle('#000000');
+      ctx.moveTo(0, cavH-38)
+      ctx.lineTo(cavW, cavH - 38)
+      ctx.stroke()
+      ctx.drawImage('/images/foot.png',0,cavH-38,cavW,38)
+      
       
       for (var i = 0; i < width; i++) {
         for (var j = 0; j < width; j++) {
