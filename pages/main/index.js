@@ -1,15 +1,12 @@
 // pages/main/index.js
 var QR = require("../../utils/qrcode.js");
-let tittle = '公告牌\n';
-let detail = '';
+
 
 Page({
   data: {
     maskHidden: true,
     imagePath: '',
     placeholder: '',//默认二维码生成文本
-    text: tittle,
-    detail: detail,
   },
 
   onLoad: function (options) {
@@ -25,21 +22,6 @@ Page({
   },
   onShow: function () {
     // 页面显示
-    let tableID = 4058
-    let recordID = '5a37622c09a80544e308946e'
-
-    let Product = new wx.BaaS.TableObject(tableID)
-    Product.get(recordID).then((res) => {
-      // success
-      var that = this;
-      that.setData({
-        detail: res.data.detail
-      })
-      console.log(res.data.detail)
-    }, (err) => {
-      // err
-      console.log("err")
-    })
   },
   onHide: function () {
     // 页面隐藏
@@ -89,33 +71,39 @@ Page({
   },
 
   formSubmit: function (e) {
-    var that = this;
-    var url = e.detail.value.url;
-    that.setData({
-      maskHidden: false,
-    });
-
-    wx.navigateTo({
-      url: '/pages/img/index'
-    });
-    wx.showLoading({
-      title: '生成中……',
-    })
-
-    setTimeout(function () {
-      wx.hideLoading()
-    }, 2000)
-    var st = setTimeout(function () {
-      wx.hideToast()
-      var size = that.setCanvasSize();
-      //绘制二维码
-      that.createQrCode(url, "mycanvas", size.w, size.h);
+    if (e.detail.value.url.length == 0) {
+      wx.showModal({
+        content: '内容不能为空！',
+        showCancel: false,
+      })
+    } else {
+      var that = this;
+      var url = e.detail.value.url;
       that.setData({
-        maskHidden: true
+        maskHidden: false,
       });
-      clearTimeout(st);
-    }, 2000)
 
+      wx.navigateTo({
+        url: '/pages/img/index'
+      });
+      wx.showLoading({
+        title: '生成中……',
+      })
+
+      setTimeout(function () {
+        wx.hideLoading()
+      }, 2000)
+      var st = setTimeout(function () {
+        wx.hideToast()
+        var size = that.setCanvasSize();
+        //绘制二维码
+        that.createQrCode(url, "mycanvas", size.w, size.h);
+        that.setData({
+          maskHidden: true
+        });
+        clearTimeout(st);
+      }, 2000)
+    }
   },
   /**
    * 用户点击右上角分享

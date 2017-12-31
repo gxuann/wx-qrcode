@@ -10,14 +10,4 @@
   </form>
   <button class="feedback" bindtap="listenerfeedback">反馈</button>
 
-<view class="ntext">
-  <view class="body-view">
-    <view class='texttittle'>
-      <text class='texttittle'>{{text}}</text>
-    </view>
-    <text class='textdetail'>{{detail}}</text>
-  </view>
-</view>
-
-
 </view>
