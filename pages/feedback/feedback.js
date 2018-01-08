@@ -66,9 +66,9 @@ Page({
 
   },
   formBindsubmit: function (e) {
-    if (e.detail.value.detail.length == 0) {
+    if (e.detail.value.detail.length == 0 | e.detail.value.email.length == 0) {
       wx.showModal({
-        content: '反馈内容不能为空！',
+        content: '请完善反馈信息。',
         showCancel: false,
       })
     } else {
