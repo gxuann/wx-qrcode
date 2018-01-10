@@ -3,7 +3,7 @@
 微信小程序，使用这个小程序可以轻松地将任何数据转换成二维码。<br>
 
 [![Build Status](https://travis-ci.org/guangxuan126/wx-qrcode.svg?branch=master)](https://travis-ci.org/guangxuan126/wx-qrcode)
-
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 ---
 
 使用这个小程序可以轻松生成二维码

@@ -1,4 +1,4 @@
-const html2Json = require('./html2json');
+const html2Json = require('./html2json')
 
 /**
  * 主解析函数
@@ -11,46 +11,45 @@ const html2Json = require('./html2json');
  */
 const parse = ({ bind = 'wxParserData', html, target, enablePreviewImage = true, tapLink }) => {
   if (Object.prototype.toString.call(html) !== '[object String]') {
-    throw new Error('HTML 内容必须是字符串');
+    throw new Error('HTML 内容必须是字符串')
   }
-  let that = target;
-  let transData = {}; // 存放转化后的数据
-  transData = html2Json.html2json(html, bind);
+  let that = target
+  let transData = {} // 存放转化后的数据
+  transData = html2Json.html2json(html, bind)
 
-  let bindData = {};
-  bindData[bind] = transData;
+  let bindData = {}
+  bindData[bind] = transData
 
   that.setData(bindData)
 
   // 加载图片后回调函数
   that.loadedWxParserImg = (e) => {
 
-  };
+  }
 
   // 点击图片
   that.tapWxParserImg = (e) => {
     if (!enablePreviewImage) {
-      return;
+      return
     }
-    let src = e.target.dataset.src;
-    let tagFrom = e.target.dataset.from;
+    let src = e.target.dataset.src
+    let tagFrom = e.target.dataset.from
     if (typeof (tagFrom) !== 'undefined' && tagFrom.length > 0) {
       wx.previewImage({
         current: src, // 当前显示图片的 http 链接
         urls: that.data[tagFrom].imageUrls // 需要预览的图片 http 链接列表
       })
     }
-  };
+  }
 
   // 点击超链接
   if (Object.prototype.toString.call(tapLink) === '[object Function]') {
     that.tapWxParserA = (e) => {
-      let href = e.currentTarget.dataset.href;
-      tapLink(href);
-    };
+      let href = e.currentTarget.dataset.href
+      tapLink(href)
+    }
   }
-
-};
+}
 
 module.exports = {
   parse

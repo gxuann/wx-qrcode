@@ -5,12 +5,12 @@ module.exports = {
    * @return {Object}     映射表
    */
   makeMap: (str) => {
-    let map = {};
-    let items = str.split(',');
+    let map = {}
+    let items = str.split(',')
     for (let i = 0, len = items.length; i < len; i++) {
-      map[items[i]] = true;
+      map[items[i]] = true
     }
-    return map;
+    return map
   },
   /**
    * 根据 size 属性得到字体大小
@@ -18,30 +18,30 @@ module.exports = {
    * @return {String}
    */
   getFontSizeByAttribsSize: function (size) {
-    var fontSize;
-    size = parseInt(size, 10);
+    var fontSize
+    size = parseInt(size, 10)
     switch (size) {
       case 2:
-        fontSize = 0.75;
-        break;
+        fontSize = 0.75
+        break
       case 3:
-        fontSize = 1;
-        break;
+        fontSize = 1
+        break
       case 4:
-        fontSize = 1.17;
-        break;
+        fontSize = 1.17
+        break
       case 5:
-        fontSize = 1.5;
-        break;
+        fontSize = 1.5
+        break
       case 6:
-        fontSize = 2;
-        break;
+        fontSize = 2
+        break
       case 7:
-        fontSize = 3;
-        break;
+        fontSize = 3
+        break
       default:
-        fontSize = 1;
+        fontSize = 1
     }
-    return fontSize + 'em';
-  },
+    return fontSize + 'em'
+  }
 }

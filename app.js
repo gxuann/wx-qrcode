@@ -1,4 +1,4 @@
-//app.js
+// app.js
 App({
   onLaunch: function () {
     require('./sdk-v1.1.1')
@@ -10,19 +10,19 @@ App({
 
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs);
+    wx.setStorageSync('logs', logs)
 
     wx.getSetting({
-      success(res) {
+      success (res) {
         if (!res.authSetting['scope.writePhotosAlbum']) {
           wx.authorize({
             scope: 'scope.writePhotosAlbum',
-            success() {
+            success () {
               console.log('成功')
             },
-            fail() {
+            fail () {
               console.log('失败')
-            },
+            }
           })
         }
       }
@@ -32,15 +32,15 @@ App({
   getUserInfo: function (cb) {
     var that = this
     if (this.globalData.userInfo) {
-      typeof cb == "function" && cb(this.globalData.userInfo)
+      typeof cb === 'function' && cb(this.globalData.userInfo)
     } else {
-      //调用登录接口
+      // 调用登录接口
       wx.login({
         success: function () {
           wx.getUserInfo({
             success: function (res) {
               that.globalData.userInfo = res.userInfo
-              typeof cb == "function" && cb(that.globalData.userInfo)
+              typeof cb === 'function' && cb(that.globalData.userInfo)
             }
           })
         }

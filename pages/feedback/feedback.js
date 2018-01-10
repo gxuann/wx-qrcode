@@ -69,7 +69,7 @@ Page({
     if (e.detail.value.detail.length == 0 | e.detail.value.email.length == 0) {
       wx.showModal({
         content: '请完善反馈信息。',
-        showCancel: false,
+        showCancel: false
       })
     } else {
       let tableID = 4014
@@ -90,7 +90,7 @@ Page({
       }, (err) => {
         wx.showModal({
           content: '提交失败，请检查网络设置！',
-          showCancel: false,
+          showCancel: false
         })
       })
     }
@@ -99,5 +99,5 @@ Page({
     wx.reLaunch({
       url: '/pages/main/index'
     })
-  },
+  }
 })
