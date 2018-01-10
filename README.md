@@ -1,6 +1,8 @@
 # wx-qrcode
 微信小程序，使用这个小程序可以轻松地将任何数据转换成二维码。
+
 [![Build Status](https://travis-ci.org/guangxuan126/wx-qrcode.svg?branch=master)](https://travis-ci.org/guangxuan126/wx-qrcode)
+
 ---
 
 使用这个小程序可以轻松生成二维码
