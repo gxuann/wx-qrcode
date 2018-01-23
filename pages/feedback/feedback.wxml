@@ -2,7 +2,7 @@
 <form bindsubmit="formBindsubmit" bindreset="formReset">
 
   <view class="text11">
-    <icon type='info' size='17'></icon> 为了帮助我提高这个小程序的质量，如果你发现了任何bug或者有其他建议的话，欢迎在这里提出,如果可以的话，请在下面留下你的邮箱~
+    <icon type='info' size='17'></icon> 为了帮助我提高这个小程序的质量，如果你发现了任何bug或者有其他建议的话，欢迎在这里提出~
   </view>
 
   <view class="input-area">

@@ -12,6 +12,14 @@
 
   <view class="update"></view>
     <view class="up2">
+      <view class="section__title">Ver2.7</view>
+      <view class="flex-wrp" style="flex-direction:column;">
+      <view class="flex-item bc_green">1.删除图片水印。</view>
+      <view class="flex-item bc_green"></view>
+    </view>
+  </view>
+  <view class="update"></view>
+    <view class="up2">
       <view class="section__title">Ver2.6</view>
       <view class="flex-wrp" style="flex-direction:column;">
       <view class="flex-item bc_green">1.修复空内容生成(null)的二维码的bug。</view>

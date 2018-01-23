@@ -1,0 +1,17 @@
+var joinArray = function (array) {
+  return array.join(' ')
+}
+
+// 通过正则来检验邮箱是否有效
+var validateEmail = function (email) {
+  var reg = getRegExp('^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
+  return reg.test(email)
+}
+
+var message = "haha"
+
+module.exports = {
+  joinArray: joinArray,
+  validateEmail: validateEmail,
+  message: message
+}
