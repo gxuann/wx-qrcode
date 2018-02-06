@@ -9,5 +9,4 @@
     <button formType="submit" class="mybtn" type="primary">生成二维码</button>
   </form>
   <button class="feedback" bindtap="listenerfeedback">反馈</button>
-
 </view>

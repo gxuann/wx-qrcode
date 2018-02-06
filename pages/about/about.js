@@ -62,7 +62,11 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: 'QR二维码',
+      path: '/pages/main/index',
+      imageUrl: '/images/share.png'
+    }
   },
 
   listenerChooseImage: function (e) {

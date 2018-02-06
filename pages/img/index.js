@@ -81,7 +81,7 @@ Page({
     return {
       title: 'QR二维码',
       path: '/pages/main/index',
-      imageUrl: '/images/logo.png'
+      imageUrl: '/images/share.png'
     }
   },
 

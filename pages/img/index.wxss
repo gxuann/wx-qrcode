@@ -44,3 +44,13 @@
   margin: 20rpx;
   text-align: center;
 }
+
+.copy{
+  background-color: #efeff4;
+  width: 100%;
+  font-size: 10px;
+  text-align: center;
+  color: #888888;
+  position: fixed;
+  bottom: 0rpx;
+}
