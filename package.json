@@ -1,6 +1,6 @@
 {
   "name": "wx-qrcode",
-  "description": "MinUI-小程序",
+  "description": "快速生成二维码",
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {},

@@ -2,8 +2,10 @@
 	"description": "项目配置文件。",
 	"compileType": "miniprogram",
 	"libVersion": "1.7.1",
-	"appid": "touristappid",
-	"projectname": "MinUI",
-	"setting": {},
+	"appid": "wx787e617292200efe",
+	"projectname": "QR%E4%BA%8C%E7%BB%B4%E7%A0%81",
+	"setting": {
+		"newFeature": true
+	},
 	"condition": {}
 }
