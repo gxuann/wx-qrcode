@@ -100,7 +100,7 @@
   </view>
 
 </scroll-view>
-<view class="copy">
+<view class="copy" style='opacity:0.98;'>
   <view class="line"></view>
   <view class="flex-wrp" style="flex-direction:column;">
   <image src='/images/gxuann.jpg' class="gxuann" bindtap='listenerChooseImage'></image>

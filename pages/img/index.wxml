@@ -11,7 +11,7 @@
 <view hidden="{{maskHidden}}" class="mask"></view>
 <view class="canvas-box"></view>
 
-<view class="copy">
+<view class="copy" style='opacity:0.98;'>
   <view class="line"></view>
   <view class="flex-wrp" style="flex-direction:column;">
     <view class="flex-item bc_green">如果你觉得这个小程序不错，欢迎分享给好友~</view>
