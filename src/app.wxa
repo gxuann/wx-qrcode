@@ -1,0 +1,45 @@
+<template>
+  <view>
+    <layout-head></layout-head>
+
+    <!-- wxp template -->
+    <page></page>
+
+    <layout-foot></layout-foot>
+  </view>
+</template>
+
+<script>
+  export default {
+    config: {
+      usingComponents: {
+        'layout-head': 'layout/head',
+        'layout-foot': 'layout/foot'
+      },
+      pages: [],
+      window: {
+        backgroundTextStyle: 'dark',
+        backgroundColor: '#efefef',
+        navigationBarBackgroundColor: '#ffffff',
+        navigationBarTitleText: 'MinUI',
+        navigationBarTextStyle: 'black'
+      },
+      networkTimeout: {
+        request: 10000
+      }
+    },
+    globalData: { },
+    onLaunch () { },
+    onShow () { },
+    onHide () { }
+  }
+</script>
+
+<style>
+page {
+  background-color: #F8F8F8;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 1.5;
+}
+</style>

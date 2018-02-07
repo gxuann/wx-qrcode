@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/home/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#efefef",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "MinUI",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 10000
+  }
+}
