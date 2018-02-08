@@ -1,6 +1,9 @@
 {
   "pages": [
-    "pages/home/index"
+    "pages/generate/index",
+    "pages/about/index",
+    "pages/img/index",
+    "pages/feedback/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -8,6 +11,26 @@
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "MinUI",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7b7f84",
+    "selectedColor": "#1aad19",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/generate/index",
+        "text": "主页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home1.png"
+      },
+      {
+        "pagePath": "pages/about/index",
+        "text": "关于",
+        "iconPath": "images/help.png",
+        "selectedIconPath": "images/help1.png"
+      }
+    ]
   },
   "networkTimeout": {
     "request": 10000

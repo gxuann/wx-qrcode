@@ -1,0 +1,16 @@
+<template>
+  <view>Generate Page</view>
+</template>
+
+<script>
+export default {
+  config: {
+    navigationBarTitleText: '生成二维码',
+    usingComponents: {}
+  },
+  data: {}
+}
+</script>
+
+<style>
+</style>

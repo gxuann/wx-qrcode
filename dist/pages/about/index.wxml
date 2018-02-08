@@ -1,0 +1,8 @@
+<view>
+    <layout-head></layout-head>
+
+    <!-- wxp template -->
+    <view>About Page</view>
+
+    <layout-foot></layout-foot>
+</view>

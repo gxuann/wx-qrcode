@@ -1,0 +1,16 @@
+<template>
+  <view>Img Page</view>
+</template>
+
+<script>
+export default {
+  config: {
+    navigationBarTitleText: 'QR二维码',
+    usingComponents: {}
+  },
+  data: {}
+}
+</script>
+
+<style>
+</style>

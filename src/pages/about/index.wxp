@@ -1,0 +1,16 @@
+<template>
+  <view>About Page</view>
+</template>
+
+<script>
+export default {
+  config: {
+    navigationBarTitleText: '关于&说明',
+    usingComponents: {}
+  },
+  data: {}
+}
+</script>
+
+<style>
+</style>

@@ -1,0 +1,16 @@
+<template>
+  <view>Feedback Page</view>
+</template>
+
+<script>
+export default {
+  config: {
+    navigationBarTitleText: '反馈',
+    usingComponents: {}
+  },
+  data: {}
+}
+</script>
+
+<style>
+</style>
