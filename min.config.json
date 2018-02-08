@@ -6,7 +6,7 @@
     "subHeadingColor": "#666666",
     "darkPromptColor": "#999999",
     "splitLineColor": "#ECECEC",
-    "backgroundColour": "#EFEFEF"
+    "backgroundColour": "#EFEFF4"
   },
   "prefix": "wxc",
   "dest": "dist",

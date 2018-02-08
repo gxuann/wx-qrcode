@@ -3,7 +3,13 @@
   "description": "快速生成二维码",
   "version": "1.0.0",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "@minui/wxc-cc": "^1.0.1",
+    "@minui/wxc-flex": "^1.0.3",
+    "@minui/wxc-icon": "^1.0.6",
+    "@minui/wxc-steps": "^1.0.5",
+    "@minui/wxc-tab": "^1.0.5"
+  },
   "devDependencies": {
     "babel-plugin-syntax-export-extensions": "^6.13.0",
     "babel-plugin-transform-class-properties": "^6.24.1",

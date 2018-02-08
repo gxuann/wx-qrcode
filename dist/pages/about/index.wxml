@@ -2,7 +2,12 @@
     <layout-head></layout-head>
 
     <!-- wxp template -->
-    <view>About Page</view>
+    <wxc-tab bind:tabchange="onClick" default-index="{{4}}" active-text-color="#a6d3ff" active-line-color="#a6d3ff" component-id="c1" animate="{{true}}" _pid="{{_pid}}">
+        <wxc-tab-panel wx:for="{{tabs}}" wx:for-item="tab" wx:key="{{tab.content}}" tab-index="{{index}}" component-id="c1" label="{{tab.title}}" _pid="{{_pid}}">
+            {{tab.content}}
+        </wxc-tab-panel>
+
+    </wxc-tab>
 
     <layout-foot></layout-foot>
 </view>

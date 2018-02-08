@@ -1,14 +1,42 @@
 <template>
-  <view>About Page</view>
+  <wxc-tab
+    bind:tabchange="onClick"
+    default-index="{{4}}"
+    active-text-color="#a6d3ff"
+    active-line-color="#a6d3ff"
+    component-id="c1"
+    animate="{{true}}"
+  >
+    <wxc-tab-panel
+      wx:for="{{tabs}}"
+      wx:for-item="tab"
+      wx:key="{{tab.content}}"
+      tab-index="{{index}}"
+      component-id="c1"
+      label="{{tab.title}}"
+    >
+      {{tab.content}}
+    </wxc-tab-panel>
+
+  </wxc-tab>
 </template>
 
 <script>
 export default {
   config: {
     navigationBarTitleText: '关于&说明',
-    usingComponents: {}
+    usingComponents: {
+      'wxc-tab': '@minui/wxc-tab',
+      'wxc-tab-panel': '@minui/wxc-tab/panel',
+      'wxc-tab-label': '@minui/wxc-tab/label'
+    }
   },
-  data: {}
+  data: {
+    tabs: [
+      {title: '如何操作', content: '内容一'},
+      {title: 'ChangeLog', content: '内容二'},
+    ]
+  }
 }
 </script>
 

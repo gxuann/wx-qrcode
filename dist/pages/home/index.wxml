@@ -1,0 +1,19 @@
+<view>
+    <layout-head></layout-head>
+
+    <!-- wxp template -->
+    <wxc-flex class="wrap" dir="top" _pid="{{_pid}}">
+        <image class="logo_pic" src="https://images.gxuann.cn/qrcode/logo.png"></image>
+        <view class="logo_text">轻松地将任何数据转换成二维码</view>
+        <view class="button">
+            <button type="default" bindtap="toGenerate">
+                <wxc-icon size="100%" type="edit" _pid="{{_pid}}"></wxc-icon> 生成二维码</button>
+        </view>
+        <view class="button">
+            <button type="default" bindtap="toScan">
+                <wxc-icon size="100%" type="scan" _pid="{{_pid}}"></wxc-icon> 扫描二维码</button>
+        </view>
+    </wxc-flex>
+
+    <layout-foot></layout-foot>
+</view>

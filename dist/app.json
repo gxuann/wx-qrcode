@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/home/index",
     "pages/generate/index",
     "pages/about/index",
     "pages/img/index",
@@ -7,19 +8,19 @@
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "backgroundColor": "#efefef",
+    "backgroundColor": "#efeff4",
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "MinUI",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#7b7f84",
-    "selectedColor": "#1aad19",
+    "selectedColor": "#a6d3ff",
     "borderStyle": "white",
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/generate/index",
+        "pagePath": "pages/home/index",
         "text": "主页",
         "iconPath": "images/home.png",
         "selectedIconPath": "images/home1.png"

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "wxc-flex": "../../packages/@minui/wxc-flex/dist/index",
+    "wxc-icon": "../../packages/@minui/wxc-icon/dist/index"
+  },
+  "navigationBarTitleText": "QR二维码"
+}
