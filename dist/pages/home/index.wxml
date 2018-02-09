@@ -3,7 +3,7 @@
 
     <!-- wxp template -->
     <wxc-flex class="wrap" dir="top" _pid="{{_pid}}">
-        <image class="logo_pic" src="https://images.gxuann.cn/qrcode/logo.png"></image>
+        <image class="logo_pic" src="../../images/logo.png"></image>
         <view class="logo_text">轻松地将任何数据转换成二维码</view>
         <view class="button">
             <button type="default" bindtap="toGenerate">

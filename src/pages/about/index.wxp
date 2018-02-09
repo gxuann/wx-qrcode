@@ -1,5 +1,4 @@
 <template>
-  <view class="page">
       <view class="page__bd">
           <view class="weui-tab">
               <view class="weui-navbar">
@@ -16,12 +15,12 @@
                       <view class="howTo">
                         <wxc-label type="fill" type-color="#a6d3ff">生成二维码</wxc-label>
                         <view></view>
-                        <image class="howTo_pic" src="https://images.gxuann.cn/qrcode/howGenerate.png"></image>
+                        <image class="howTo_pic" src="../../images/howGenerate.png"></image>
                       </view>
                       <view class="howTo">
                         <wxc-label type="fill" type-color="#ff5349">扫描二维码</wxc-label>
                         <view></view>
-                        <image class="howTo_pic" src="https://images.gxuann.cn/qrcode/howScan.png"></image>
+                        <image class="howTo_pic" src="../../images/howScan.png"></image>
                       </view>
                     </wxc-flex>
                     <wxc-loadmore is-end="{{true}}" text="·"></wxc-loadmore>
@@ -74,7 +73,6 @@
               </view>
           </view>
       </view>
-  </view>
 </template>
 
 <script>

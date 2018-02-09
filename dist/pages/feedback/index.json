@@ -1,4 +1,8 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "反馈"
+  "usingComponents": {
+    "wxc-icon": "../../packages/@minui/wxc-icon/dist/index",
+    "wxc-flex": "../../packages/@minui/wxc-flex/dist/index",
+    "wxc-toast": "../../packages/@minui/wxc-toast/dist/index"
+  },
+  "navigationBarTitleText": "QR二维码"
 }

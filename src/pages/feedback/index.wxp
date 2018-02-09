@@ -1,16 +1,165 @@
 <template>
-  <view>Feedback Page</view>
+  <view class="page_hd">
+    <view class="page_title">反馈</view>
+    <view class="page_desc"></wxc-icon>为了帮助我提高这个小程序的质量，如果你在使用中发现了bug或者有其他建议的话，可以在这里反馈给我~</view>
+  </view>
+  <view class="zan-toptips {{ zanTopTips.show ? 'zan-toptips--show' : '' }}">{{ zanTopTips.content }}</view>
+  <wxc-toast is-show="{{$toast.show}}" icon="yes">提交成功</wxc-toast>
+  <wxc-toast is-show="{{$toast2.show}}" icon="no">提交失败，请检查网络</wxc-toast>
+  <form bindsubmit="formBindsubmit" bindreset="formReset">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">邮箱</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input name="email" class="weui-input" placeholder="请输入邮箱" value='{{email}}'/>
+      </view>
+    </view>
+    <view class="input-area">
+      <view class="section__title">内容</view>
+      <textarea name="detail" type="text" maxlength="-1" placeholder="请在这里输入反馈内容" value='{{detail}}'></textarea>
+    </view>
+    <view class="bt-area">
+      <wxc-flex class="wrap">
+        <view class="item main"><button class="btn-sub" formType="submit">提交</button></view>
+        <view class="item side"><button class="reset btn-res" formType="reset">重置</button></view>
+      </wxc-flex>
+    </view>
+  </form>
 </template>
 
 <script>
 export default {
   config: {
-    navigationBarTitleText: '反馈',
-    usingComponents: {}
+    navigationBarTitleText: 'QR二维码',
+    usingComponents: {
+      'wxc-icon': '@minui/wxc-icon',
+      'wxc-flex': '@minui/wxc-flex',
+      'wxc-toast': '@minui/wxc-toast'
+    }
   },
-  data: {}
+  data: {
+    email: '',
+    detail: '',
+    $toast: {
+      show: false
+    },
+    $toast2: {
+      show: false
+    }
+  },
+  formBindsubmit: function (e) {
+    if (e.detail.value.detail.length == 0 | e.detail.value.length == 0) {
+      this.showZanTopTips('请完善反馈信息');
+    } else {
+      let tableID = 4014
+      let Product = new wx.BaaS.TableObject(tableID)
+      let product = Product.create()
+      product.set('email', e.detail.value.email)
+      product.set('detail', e.detail.value.detail)
+      product.save().then((res) => {
+        wx.showToast({
+          title: '提交成功',
+          icon: 'success',
+          duration: 2000
+        }),
+          this.setData({
+            email: '',
+            detail: ''
+          })
+      }, (err) => {
+        wx.showModal({
+          content: '提交失败，请检查网络设置！',
+          showCancel: false
+        })
+      })
+    }
+  },
+  showZanTopTips(content = '', options = {}) {
+    let zanTopTips = this.data.zanTopTips || {};
+    // 如果已经有一个计时器在了，就清理掉先
+    if (zanTopTips.timer) {
+      clearTimeout(zanTopTips.timer);
+      zanTopTips.timer = 0;
+    }
+
+    if (typeof options === 'number') {
+      options = {
+        duration: options
+      };
+    }
+    options = Object.assign({
+      duration: 3000
+    }, options);
+    let timer = setTimeout(() => {
+      this.setData({
+        'zanTopTips.show': false,
+        'zanTopTips.timer': 0
+      });
+    }, options.duration);
+    this.setData({
+      zanTopTips: {
+        show: true,
+        content,
+        options,
+        timer
+      }
+    });
+  }
 }
 </script>
 
 <style>
+.page_hd{
+  margin-top: 100rpx;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+}
+.page_title{
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+.page_desc{
+  font-size: 28rpx;
+  color: #666666;
+  margin-bottom: 40rpx;
+}
+.weui-cell_input{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.input-area{
+  display: flex;
+  padding: 20rpx 20rpx 20rpx 20rpx;
+  align-items: center;
+  background: white;
+  margin-top: 15rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.wrap {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  display: block;
+}
+.item {
+  font-size: 20rpx;
+  line-height: 300rpx;
+  text-align: center;
+}
+.side {
+  width: 200rpx;
+  flex-grow: 0;
+}
+.main {
+  flex-grow: 1;
+  margin-right: 10rpx;
+}
+.btn-sub{
+  color: white;
+  background-color: #1d8fff;
+}
 </style>
