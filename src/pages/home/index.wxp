@@ -4,6 +4,7 @@
   <view class="logo_text">轻松地将任何数据转换成二维码</view>
   <view class="button"><button type="default" bindtap="toGenerate"><wxc-icon size="100%" type="edit"></wxc-icon> 生成二维码</button></view>
   <view class="button"><button type="default" bindtap="toScan"><wxc-icon size="100%" type="scan"></wxc-icon> 扫描二维码</button></view>
+  <view class="button"><button type="default" bindtap="toFeedback"><wxc-icon size="100%" type="feedback"></wxc-icon> 反馈</button></view>
 </wxc-flex>
 </template>
 

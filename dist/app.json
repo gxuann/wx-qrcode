@@ -1,7 +1,10 @@
 {
   "pages": [
+    "pages/home/index",
+    "pages/generate/index",
     "pages/about/index",
-    "pages/home/index"
+    "pages/img/index",
+    "pages/feedback/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -16,12 +19,6 @@
     "borderStyle": "white",
     "backgroundColor": "#ffffff",
     "list": [
-      {
-        "pagePath": "pages/about/index",
-        "iconPath": "assets/tab/dev.png",
-        "selectedIconPath": "assets/tab/dev_hl.png",
-        "text": "<about/>"
-      },
       {
         "pagePath": "pages/home/index",
         "text": "主页",

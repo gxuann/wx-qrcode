@@ -13,6 +13,10 @@
             <button type="default" bindtap="toScan">
                 <wxc-icon size="100%" type="scan" _pid="{{_pid}}"></wxc-icon> 扫描二维码</button>
         </view>
+        <view class="button">
+            <button type="default" bindtap="toFeedback">
+                <wxc-icon size="100%" type="feedback" _pid="{{_pid}}"></wxc-icon> 反馈</button>
+        </view>
     </wxc-flex>
 
     <layout-foot></layout-foot>

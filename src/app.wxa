@@ -60,7 +60,6 @@
 </script>
 
 <style>
-@import "../src/common/zanui/index.wxss";
 @import "../src/common/weui/style/weui.wxss";
 page {
   background-color: #EFEFF4;

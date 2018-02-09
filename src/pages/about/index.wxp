@@ -11,8 +11,59 @@
                   <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
               </view>
               <view class="weui-tab__panel">
-                  <view class="weui-tab__content" hidden="{{activeIndex != 0}}">选项一的内容</view>
-                  <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
+                  <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                    <wxc-flex dir="between">
+                      <view class="howTo">
+                        <wxc-label type="fill" type-color="#a6d3ff">生成二维码</wxc-label>
+
+                      </view>
+                      <view class="howTo">
+                        <wxc-label type="fill" type-color="#ff5349">扫描二维码</wxc-label>
+                      </view>
+                    </wxc-flex>
+                  </view>
+                  <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                    <view class="aboutHead">
+                      <image src='https://images.gxuann.cn/qrcode/gxuann.jpg' class="gxuann" bindtap='clickGxuann'></image>
+                      <view>作者:GuangXuan</view>
+                      <view>Github:guangxuan126</view>
+
+                    </view>
+                    <wxc-loadmore is-end="{{true}}" text="·"></wxc-loadmore>
+                    <wxc-label class="versionLabel" type="fill" type-color="#a6d3ff">当前版本</wxc-label>
+                    <wxc-label class="versionLabel" type="fill" type-color="#ff5349">v3.0</wxc-label>
+                    <view class="versionGroup">
+                      <view class="versionNum">v3.0</view>
+                      <view class="versionDetail">- 重新设计了界面:结合使用了MinUI & WeUI</view>
+                      <view class="versionDetail">- 添加了扫描二维码的功能</view>
+
+                      <view class="versionNum">v2.8</view>
+                      <view class="versionDetail">- 更新了分享页面的图片</view>
+                      <view class="versionNum">v2.7</view>
+                      <view class="versionDetail">- 删除图片水印</view>
+                      <view class="versionNum">v2.6</view>
+                      <view class="versionDetail">- 修复bug:空内容生成(null)的二维码</view>
+                      <view class="versionNum">v2.5</view>
+                      <view class="versionDetail">- 修复bug:反馈功能提交失败</view>
+                      <view class="versionNum">v2.4</view>
+                      <view class="versionDetail">- 细节调整</view>
+                      <view class="versionNum">v2.3</view>
+                      <view class="versionDetail">- 添加反馈功能</view>
+                      <view class="versionNum">v2.2</view>
+                      <view class="versionDetail">- 修复bug:ShowLoading显示问题</view>
+                      <view class="versionDetail">- 修改界面</view>
+                      <view class="versionNum">v2.1</view>
+                      <view class="versionDetail">- 修复bug:</view>
+                      <view class="versionNum">v2.0</view>
+                      <view class="versionDetail">- 添加图片保存功能</view>
+                      <view class="versionDetail">- 添加图片预览功能</view>
+                      <view class="versionNum">v1.1</view>
+                      <view class="versionDetail">- 纠正文本错误</view>
+                      <view class="versionNum">v1.0</view>
+                      <view class="versionDetail">- 二维码暂不可保存，请截图保存</view>
+                    </view>
+                    <wxc-loadmore is-end="{{true}}" text="到底了～" icon="{{true}}"></wxc-loadmore>
+                  </view>
               </view>
           </view>
       </view>
@@ -25,14 +76,17 @@ export default {
   config: {
     navigationBarTitleText: '关于&说明',
     usingComponents: {
-      'wxc-steps': '@minui/wxc-steps'
+      'wxc-flex': '@minui/wxc-flex',
+      'wxc-label': '@minui/wxc-label',
+      'wxc-icon': '@minui/wxc-icon',
+      'wxc-loadmore': '@minui/wxc-loadmore'
     }
   },
   data: {
     tabs: ["使用方法", "ChangeLog"],
-    activeIndex: 1,
-    sliderOffset: 0,
-    sliderLeft: 0
+      activeIndex: 0,
+      sliderOffset: 0,
+      sliderLeft: 0,
   },
   onLoad: function () {
     var that = this;
@@ -44,13 +98,26 @@ export default {
             });
         }
     });
-},
-tabClick: function (e) {
-    this.setData({
-        sliderOffset: e.currentTarget.offsetLeft,
-        activeIndex: e.currentTarget.id
-    });
-}
+  },
+  tabClick: function (e) {
+      this.setData({
+          sliderOffset: e.currentTarget.offsetLeft,
+          activeIndex: e.currentTarget.id
+      });
+  },
+  clickGxuann: function(e){
+    wx.previewImage({
+      current: 'https://images.gxuann.cn/qrcode.jpg',
+      urls: ['https://images.gxuann.cn/qrcode.jpg']
+    })
+  },
+  onShareAppMessage: function () {
+    return {
+      title: 'QR二维码',
+      path: '/pages/home/index',
+      imageUrl: 'https://images.gxuann.cn/qrcode/share.png'
+    }
+  }
 }
 </script>
 
@@ -63,8 +130,43 @@ page,
 .page__bd{
     padding-bottom: 0;
 }
+.weui-navbar{
+  background: #ffffff;
+}
 .weui-tab__content{
     padding-top: 60rpx;
     text-align: center;
+}
+.howTo{
+  margin: auto;
+}
+.item {
+   min-width: 100rpx;
+   min-height: 100rpx;
+   font-size: 22rpx;
+   text-align: center;
+ }
+ .versionGroup{
+   text-align: left;
+   margin-left: 30rpx;
+   color: #666666;
+ }
+ .versionNum{
+   margin-top: 20rpx;
+   font-size: 28rpx;
+   font-weight: bold;
+ }
+ .versionDetail{
+   font-size: 20rpx;
+ }
+.aboutHead{
+  font-size: 15rpx;
+  text-align: center;
+  color: #666666;
+  margin:auto;
+}
+.gxuann{
+  width: 30rpx;
+  height: 30rpx;
 }
 </style>

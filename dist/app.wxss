@@ -1,4 +1,3 @@
-@import './common/zanui/index.wxss';
 @import './common/weui/style/weui.wxss';
 page {
   background-color: #EFEFF4;

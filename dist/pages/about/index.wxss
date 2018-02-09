@@ -6,7 +6,42 @@ page,
 .page__bd{
     padding-bottom: 0;
 }
+.weui-navbar{
+  background: #ffffff;
+}
 .weui-tab__content{
     padding-top: 60rpx;
     text-align: center;
+}
+.howTo{
+  margin: auto;
+}
+.item {
+   min-width: 100rpx;
+   min-height: 100rpx;
+   font-size: 22rpx;
+   text-align: center;
+ }
+ .versionGroup{
+   text-align: left;
+   margin-left: 30rpx;
+   color: #666666;
+ }
+ .versionNum{
+   margin-top: 20rpx;
+   font-size: 28rpx;
+   font-weight: bold;
+ }
+ .versionDetail{
+   font-size: 20rpx;
+ }
+.aboutHead{
+  font-size: 15rpx;
+  text-align: center;
+  color: #666666;
+  margin:auto;
+}
+.gxuann{
+  width: 30rpx;
+  height: 30rpx;
 }

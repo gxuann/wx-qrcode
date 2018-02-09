@@ -7,6 +7,8 @@
     "@minui/wxc-cc": "^1.0.1",
     "@minui/wxc-flex": "^1.0.3",
     "@minui/wxc-icon": "^1.0.6",
+    "@minui/wxc-label": "^1.0.3",
+    "@minui/wxc-loadmore": "^1.0.5",
     "@minui/wxc-steps": "^1.0.5",
     "@minui/wxc-tab": "^1.0.5"
   },

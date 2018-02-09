@@ -14,8 +14,59 @@
                     <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
                 </view>
                 <view class="weui-tab__panel">
-                    <view class="weui-tab__content" hidden="{{activeIndex != 0}}">选项一的内容</view>
-                    <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
+                    <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                        <wxc-flex dir="between" _pid="{{_pid}}">
+                            <view class="howTo">
+                                <wxc-label type="fill" type-color="#a6d3ff" _pid="{{_pid}}">生成二维码</wxc-label>
+
+                            </view>
+                            <view class="howTo">
+                                <wxc-label type="fill" type-color="#ff5349" _pid="{{_pid}}">扫描二维码</wxc-label>
+                            </view>
+                        </wxc-flex>
+                    </view>
+                    <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                        <view class="aboutHead">
+                            <image src="https://images.gxuann.cn/qrcode/gxuann.jpg" class="gxuann" bindtap="clickGxuann"></image>
+                            <view>作者:GuangXuan</view>
+                            <view>Github:guangxuan126</view>
+
+                        </view>
+                        <wxc-loadmore is-end="{{true}}" text="·" _pid="{{_pid}}"></wxc-loadmore>
+                        <wxc-label class="versionLabel" type="fill" type-color="#a6d3ff" _pid="{{_pid}}">当前版本</wxc-label>
+                        <wxc-label class="versionLabel" type="fill" type-color="#ff5349" _pid="{{_pid}}">v3.0</wxc-label>
+                        <view class="versionGroup">
+                            <view class="versionNum">v3.0</view>
+                            <view class="versionDetail">- 重新设计了界面:结合使用了MinUI & WeUI</view>
+                            <view class="versionDetail">- 添加了扫描二维码的功能</view>
+
+                            <view class="versionNum">v2.8</view>
+                            <view class="versionDetail">- 更新了分享页面的图片</view>
+                            <view class="versionNum">v2.7</view>
+                            <view class="versionDetail">- 删除图片水印</view>
+                            <view class="versionNum">v2.6</view>
+                            <view class="versionDetail">- 修复bug:空内容生成(null)的二维码</view>
+                            <view class="versionNum">v2.5</view>
+                            <view class="versionDetail">- 修复bug:反馈功能提交失败</view>
+                            <view class="versionNum">v2.4</view>
+                            <view class="versionDetail">- 细节调整</view>
+                            <view class="versionNum">v2.3</view>
+                            <view class="versionDetail">- 添加反馈功能</view>
+                            <view class="versionNum">v2.2</view>
+                            <view class="versionDetail">- 修复bug:ShowLoading显示问题</view>
+                            <view class="versionDetail">- 修改界面</view>
+                            <view class="versionNum">v2.1</view>
+                            <view class="versionDetail">- 修复bug:</view>
+                            <view class="versionNum">v2.0</view>
+                            <view class="versionDetail">- 添加图片保存功能</view>
+                            <view class="versionDetail">- 添加图片预览功能</view>
+                            <view class="versionNum">v1.1</view>
+                            <view class="versionDetail">- 纠正文本错误</view>
+                            <view class="versionNum">v1.0</view>
+                            <view class="versionDetail">- 二维码暂不可保存，请截图保存</view>
+                        </view>
+                        <wxc-loadmore is-end="{{true}}" text="到底了～" icon="{{true}}" _pid="{{_pid}}"></wxc-loadmore>
+                    </view>
                 </view>
             </view>
         </view>
