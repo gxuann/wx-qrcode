@@ -45,3 +45,11 @@ page,
   width: 30rpx;
   height: 30rpx;
 }
+.howTo_pic{
+  width: 225rpx;
+  height: 600rpx;
+}
+.share{
+  font-size: 20rpx;
+  margin-bottom: 20rpx;
+}

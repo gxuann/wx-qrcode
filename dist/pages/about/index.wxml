@@ -15,15 +15,23 @@
                 </view>
                 <view class="weui-tab__panel">
                     <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
-                        <wxc-flex dir="between" _pid="{{_pid}}">
+                        <wxc-flex cross="center" _pid="{{_pid}}">
                             <view class="howTo">
                                 <wxc-label type="fill" type-color="#a6d3ff" _pid="{{_pid}}">生成二维码</wxc-label>
-
+                                <view></view>
+                                <image class="howTo_pic" src="https://images.gxuann.cn/qrcode/howGenerate.png"></image>
                             </view>
                             <view class="howTo">
                                 <wxc-label type="fill" type-color="#ff5349" _pid="{{_pid}}">扫描二维码</wxc-label>
+                                <view></view>
+                                <image class="howTo_pic" src="https://images.gxuann.cn/qrcode/howScan.png"></image>
                             </view>
                         </wxc-flex>
+                        <wxc-loadmore is-end="{{true}}" text="·" _pid="{{_pid}}"></wxc-loadmore>
+                        <view class="share">
+                            <view>如果你觉得这个小程序不错，欢迎分享给好友~</view>
+                            <button height="20px" size="mini" type="default" open-type="share" plain="true">分享/Share</button>
+                        </view>
                     </view>
                     <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
                         <view class="aboutHead">
@@ -39,7 +47,6 @@
                             <view class="versionNum">v3.0</view>
                             <view class="versionDetail">- 重新设计了界面:结合使用了MinUI & WeUI</view>
                             <view class="versionDetail">- 添加了扫描二维码的功能</view>
-
                             <view class="versionNum">v2.8</view>
                             <view class="versionDetail">- 更新了分享页面的图片</view>
                             <view class="versionNum">v2.7</view>
