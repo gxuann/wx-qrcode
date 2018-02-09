@@ -1,8 +1,6 @@
 {
   "usingComponents": {
-    "wxc-tab": "../../packages/@minui/wxc-tab/dist/index",
-    "wxc-tab-panel": "../../packages/@minui/wxc-tab/dist/panel",
-    "wxc-tab-label": "../../packages/@minui/wxc-tab/dist/label"
+    "wxc-steps": "../../packages/@minui/wxc-steps/dist/index"
   },
   "navigationBarTitleText": "关于&说明"
 }

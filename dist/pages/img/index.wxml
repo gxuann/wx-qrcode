@@ -1,8 +1,0 @@
-<view>
-    <layout-head></layout-head>
-
-    <!-- wxp template -->
-    <view>Img Page</view>
-
-    <layout-foot></layout-foot>
-</view>

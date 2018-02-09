@@ -30,7 +30,7 @@
       },
       tabBar: {
         "color": "#7b7f84",
-        "selectedColor": "#a6d3ff",
+        "selectedColor": "#1aad19",
         "borderStyle": "white",
         "backgroundColor": "#ffffff",
         "list": [
@@ -60,6 +60,8 @@
 </script>
 
 <style>
+@import "../src/common/zanui/index.wxss";
+@import "../src/common/weui/style/weui.wxss";
 page {
   background-color: #EFEFF4;
   height: 100%;

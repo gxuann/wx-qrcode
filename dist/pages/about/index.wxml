@@ -2,12 +2,24 @@
     <layout-head></layout-head>
 
     <!-- wxp template -->
-    <wxc-tab bind:tabchange="onClick" default-index="{{4}}" active-text-color="#a6d3ff" active-line-color="#a6d3ff" component-id="c1" animate="{{true}}" _pid="{{_pid}}">
-        <wxc-tab-panel wx:for="{{tabs}}" wx:for-item="tab" wx:key="{{tab.content}}" tab-index="{{index}}" component-id="c1" label="{{tab.title}}" _pid="{{_pid}}">
-            {{tab.content}}
-        </wxc-tab-panel>
-
-    </wxc-tab>
+    <view class="page">
+        <view class="page__bd">
+            <view class="weui-tab">
+                <view class="weui-navbar">
+                    <block wx:for="{{tabs}}" wx:key="*this">
+                        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                            <view class="weui-navbar__title">{{item}}</view>
+                        </view>
+                    </block>
+                    <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+                </view>
+                <view class="weui-tab__panel">
+                    <view class="weui-tab__content" hidden="{{activeIndex != 0}}">选项一的内容</view>
+                    <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
+                </view>
+            </view>
+        </view>
+    </view>
 
     <layout-foot></layout-foot>
 </view>
