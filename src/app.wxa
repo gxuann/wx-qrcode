@@ -19,6 +19,7 @@
         "pages/generate/index",
         "pages/about/index",
         "pages/img/index",
+        "pages/scanrs/index",
         "pages/feedback/index"
       ],
       window: {

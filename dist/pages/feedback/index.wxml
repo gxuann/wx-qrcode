@@ -2,7 +2,7 @@
     <layout-head></layout-head>
 
     <!-- wxp template -->
-    <view class="page_hd">
+    <view class="page_head">
         <view class="page_title">反馈</view>
         <view class="page_desc">为了帮助我提高这个小程序的质量，如果你在使用中发现了bug或者有其他建议的话，可以在这里反馈给我~</view>
     </view>

@@ -27,6 +27,11 @@ export default {
     wx.navigateTo({
       url: '../../pages/feedback/index'
     })
+  },
+  toScan: function(e){
+    wx.navigateTo({
+      url: '../../pages/scanrs/index'
+    })
   }
 }
 </script>

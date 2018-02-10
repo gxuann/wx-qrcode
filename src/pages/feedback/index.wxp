@@ -1,7 +1,7 @@
 <template>
-  <view class="page_hd">
+  <view class="page_head">
     <view class="page_title">反馈</view>
-    <view class="page_desc"></wxc-icon>为了帮助我提高这个小程序的质量，如果你在使用中发现了bug或者有其他建议的话，可以在这里反馈给我~</view>
+    <view class="page_desc">为了帮助我提高这个小程序的质量，如果你在使用中发现了bug或者有其他建议的话，可以在这里反馈给我~</view>
   </view>
   <view class="zan-toptips {{ zanTopTips.show ? 'zan-toptips--show' : '' }}">{{ zanTopTips.content }}</view>
   <wxc-toast is-show="{{$toast.show}}" icon="yes">提交成功</wxc-toast>
@@ -49,7 +49,7 @@ export default {
     }
   },
   formBindsubmit: function (e) {
-    if (e.detail.value.detail.length == 0 | e.detail.value.length == 0) {
+    if (e.detail.value.detail.length == 0 | e.detail.value.email.length == 0) {
       this.showZanTopTips('请完善反馈信息');
     } else {
       let tableID = 4014
@@ -63,10 +63,10 @@ export default {
           icon: 'success',
           duration: 2000
         }),
-          this.setData({
-            email: '',
-            detail: ''
-          })
+        this.setData({
+          email: '',
+          detail: ''
+        })
       }, (err) => {
         wx.showModal({
           content: '提交失败，请检查网络设置！',
@@ -77,12 +77,10 @@ export default {
   },
   showZanTopTips(content = '', options = {}) {
     let zanTopTips = this.data.zanTopTips || {};
-    // 如果已经有一个计时器在了，就清理掉先
     if (zanTopTips.timer) {
       clearTimeout(zanTopTips.timer);
       zanTopTips.timer = 0;
     }
-
     if (typeof options === 'number') {
       options = {
         duration: options
@@ -110,7 +108,7 @@ export default {
 </script>
 
 <style>
-.page_hd{
+.page_head{
   margin-top: 100rpx;
   margin-left: 60rpx;
   margin-right: 60rpx;

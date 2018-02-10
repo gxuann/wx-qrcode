@@ -1,4 +1,4 @@
-.page_hd{
+.page_head{
   margin-top: 100rpx;
   margin-left: 60rpx;
   margin-right: 60rpx;
