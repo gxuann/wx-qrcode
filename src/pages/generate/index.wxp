@@ -1,16 +1,129 @@
 <template>
-  <view>Generate Page</view>
+  <view class="page_head">
+    <view class="page_title">生成二维码</view>
+    <view class="page_desc">填写下面的表单，点击按钮确认后即可生成二维码</view>
+  </view>
+  <view class="zan-toptips {{ zanTopTips.show ? 'zan-toptips--show' : '' }}">{{ zanTopTips.content }}</view>
+  <form bindsubmit="formBindsubmit" bindreset="formReset">
+    <view>
+      <textarea class="input-area" name="detail" type="text" maxlength="255" placeholder="请输入要转换的数据，不支持图片和emoji表情（255字符内）" value='{{detail}}'></textarea>
+    </view>
+    <view class="bt-area">
+      <wxc-flex class="wrap">
+        <view class="item main"><button class="btn-sub" formType="submit">提交</button></view>
+        <view class="item side"><button class="reset btn-res" formType="reset">重置</button></view>
+      </wxc-flex>
+    </view>
+  </form>
 </template>
 
 <script>
+var QR = require("../../utils/qrcode.js");
 export default {
   config: {
-    navigationBarTitleText: '生成二维码',
-    usingComponents: {}
+    navigationBarTitleText: 'QR二维码',
+    usingComponents: {
+      'wxc-icon': '@minui/wxc-icon',
+      'wxc-flex': '@minui/wxc-flex',
+      'wxc-toast': '@minui/wxc-toast'
+    }
   },
-  data: {}
+  data: {
+    imagePath: '',
+    $toast: {
+      show: false
+    },
+  },
+  formBindsubmit: function(e){
+    getApp().globalData.gendetail=e.detail.value.detail;
+    console.log(getApp().globalData.gendetail)
+    if (e.detail.value.detail.length == 0) {
+      this.showZanTopTips('内容不能为空');
+    }else{
+      wx.navigateTo({
+        url:'../../pages/img/index'
+      })
+    }
+  },
+  showZanTopTips(content = '', options = {}) {
+    let zanTopTips = this.data.zanTopTips || {};
+    if (zanTopTips.timer) {
+      clearTimeout(zanTopTips.timer);
+      zanTopTips.timer = 0;
+    }
+    if (typeof options === 'number') {
+      options = {
+        duration: options
+      };
+    }
+    options = Object.assign({
+      duration: 3000
+    }, options);
+    let timer = setTimeout(() => {
+      this.setData({
+        'zanTopTips.show': false,
+        'zanTopTips.timer': 0
+      });
+    }, options.duration);
+    this.setData({
+      zanTopTips: {
+        show: true,
+        content,
+        options,
+        timer
+      }
+    });
+  }
 }
 </script>
 
 <style>
+.page_head{
+  margin-top: 100rpx;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+}
+.page_title{
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+.page_desc{
+  font-size: 28rpx;
+  color: #666666;
+  margin-bottom: 40rpx;
+}
+.input-area{
+  padding: 15rpx;
+  display: block;
+  text-align: left;
+  width: 90%;
+  height: 400rpx;
+  background: white;
+  margin: auto;
+}
+.wrap {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  display: block;
+}
+.item {
+  font-size: 20rpx;
+  line-height: 300rpx;
+  text-align: center;
+}
+.side {
+  width: 200rpx;
+  flex-grow: 0;
+}
+.main {
+  flex-grow: 1;
+  margin-right: 10rpx;
+}
+.btn-sub{
+  color: white;
+  background-color: #1d8fff;
+}
 </style>

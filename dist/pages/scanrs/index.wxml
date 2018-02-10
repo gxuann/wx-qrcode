@@ -1,21 +1,14 @@
-<view>
-    <layout-head></layout-head>
-
-    <!-- wxp template -->
-    <view class="page_head">
-        <view class="page_title">扫描二维码</view>
-        <view class="page_desc">点击红色图片即可扫描，扫描成功后结果会显示在下面的文本框内</view>
-    </view>
-    <wxc-flex dir="top">
-        <view class="scan_pic">
-            <wxc-icon size="150" type="scan" color="#ff5349" bindtap="scan" _pid="{{_pid}}"></wxc-icon>
+<view class="page_head">
+    <view class="page_title">扫描二维码</view>
+    <view class="page_desc">点击红色图片即可扫描，扫描成功后结果会显示在下面的文本框内</view>
+</view>
+<wxc-flex dir="top">
+    <view class="scan_pic">
+        <wxc-icon size="150" type="scan" color="#ff5349" bindtap="scan" _pid="{{_pid}}"></wxc-icon>
+        <view>
             <view>
-                <view>
-                    <textarea name="rs" class="textarea" disabled="{{rs_sta}}" maxlength="-1" selectable="true" value="{{rs}}"></textarea>
-                </view>
+                <textarea name="rs" class="textarea" disabled="{{rs_sta}}" maxlength="-1" selectable="true" value="{{rs}}"></textarea>
             </view>
         </view>
-    </wxc-flex>
-
-    <layout-foot></layout-foot>
-</view>
+    </view>
+</wxc-flex>

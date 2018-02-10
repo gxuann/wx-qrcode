@@ -1,0 +1,48 @@
+.page_head{
+  margin-top: 100rpx;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+}
+.page_title{
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+.page_desc{
+  font-size: 28rpx;
+  color: #666666;
+  margin-bottom: 40rpx;
+}
+.input-area{
+  padding: 15rpx;
+  display: block;
+  text-align: left;
+  width: 90%;
+  height: 400rpx;
+  background: white;
+  margin: auto;
+}
+.wrap {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  display: block;
+}
+.item {
+  font-size: 20rpx;
+  line-height: 300rpx;
+  text-align: center;
+}
+.side {
+  width: 200rpx;
+  flex-grow: 0;
+}
+.main {
+  flex-grow: 1;
+  margin-right: 10rpx;
+}
+.btn-sub{
+  color: white;
+  background-color: #1d8fff;
+}

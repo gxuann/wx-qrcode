@@ -4,7 +4,7 @@
   margin-right: 60rpx;
 }
 .page_title{
-  font-size: 40rpx;
+  font-size: 50rpx;
   font-weight: bold;
   color: #333333;
   margin-bottom: 20rpx;

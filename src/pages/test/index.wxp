@@ -1,0 +1,40 @@
+<template>
+  <wxc-loading
+    is-show="{{$loading.isShow}}"
+    image="https://s10.mogucdn.com/mlcdn/c45406/170607_5241335cb37ka3ab7781ddh504ggh_200x200.png"
+    slip="http://s10.mogucdn.com/p1/160715/upload_ifrgmmzwmyydknldhezdambqmeyde_200x200.png"
+  ></wxc-loading>
+  <button bindtap="showLoading">自定义图片</button>
+</template>
+
+<script>
+  export default {
+    config: {
+      usingComponents: {
+        'wxc-loading': '@minui/wxc-loading'
+      }
+    },
+    data: {
+      $loading: {
+        isShow: false
+      }
+    },
+      showLoading() {
+        this.setData({
+          $loading: {
+            isShow: true
+          }
+        })
+        setTimeout(() => {
+          this.setData({
+          $loading: {
+            isShow: false
+          }
+        })
+      }, 1000)
+    },
+  }
+</script>
+
+<style>
+</style>

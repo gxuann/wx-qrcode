@@ -7,7 +7,6 @@
     config: {
       usingComponents: {
       },
-      data: {},
       pages: [
         "pages/home/index",
         "pages/generate/index",
@@ -47,7 +46,9 @@
         request: 10000
       }
     },
-    globalData: {},
+    globalData: {
+      gendetail:"",
+    },
     onLaunch () {
       require('./sdk-v1.1.6')
       let clientId = '3340784c73954a8d1c2b'

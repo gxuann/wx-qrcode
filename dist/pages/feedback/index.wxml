@@ -1,38 +1,31 @@
-<view>
-    <layout-head></layout-head>
-
-    <!-- wxp template -->
-    <view class="page_head">
-        <view class="page_title">反馈</view>
-        <view class="page_desc">为了帮助我提高这个小程序的质量，如果你在使用中发现了bug或者有其他建议的话，可以在这里反馈给我~</view>
-    </view>
-    <view class="zan-toptips {{ zanTopTips.show ? 'zan-toptips--show' : '' }}">{{ zanTopTips.content }}</view>
-    <wxc-toast is-show="{{$toast.show}}" icon="yes" _pid="{{_pid}}">提交成功</wxc-toast>
-    <wxc-toast is-show="{{$toast2.show}}" icon="no" _pid="{{_pid}}">提交失败，请检查网络</wxc-toast>
-    <form bindsubmit="formBindsubmit" bindreset="formReset">
-        <view class="weui-cell weui-cell_input">
-            <view class="weui-cell__hd">
-                <view class="weui-label">邮箱</view>
-            </view>
-            <view class="weui-cell__bd">
-                <input name="email" class="weui-input" placeholder="请输入邮箱" value="{{email}}"></input>
-            </view>
-        </view>
-        <view class="input-area">
-            <view class="section__title">内容</view>
-            <textarea name="detail" type="text" maxlength="-1" placeholder="请在这里输入反馈内容" value="{{detail}}"></textarea>
-        </view>
-        <view class="bt-area">
-            <wxc-flex class="wrap" _pid="{{_pid}}">
-                <view class="item main">
-                    <button class="btn-sub" formType="submit">提交</button>
-                </view>
-                <view class="item side">
-                    <button class="reset btn-res" formType="reset">重置</button>
-                </view>
-            </wxc-flex>
-        </view>
-    </form>
-
-    <layout-foot></layout-foot>
+<view class="page_head">
+    <view class="page_title">反馈</view>
+    <view class="page_desc">为了帮助我提高这个小程序的质量，如果你在使用中发现了bug或者有其他建议的话，可以在这里反馈给我~</view>
 </view>
+<view class="zan-toptips {{ zanTopTips.show ? 'zan-toptips--show' : '' }}">{{ zanTopTips.content }}</view>
+<wxc-toast is-show="{{$toast.show}}" icon="yes" _pid="{{_pid}}">提交成功</wxc-toast>
+<wxc-toast is-show="{{$toast2.show}}" icon="no" _pid="{{_pid}}">提交失败，请检查网络</wxc-toast>
+<form bindsubmit="formBindsubmit" bindreset="formReset">
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+            <view class="weui-label">邮箱</view>
+        </view>
+        <view class="weui-cell__bd">
+            <input name="email" class="weui-input" placeholder="请输入邮箱" value="{{email}}"></input>
+        </view>
+    </view>
+    <view class="input-area">
+        <view class="section__title">内容</view>
+        <textarea name="detail" type="text" maxlength="-1" placeholder="请在这里输入反馈内容" value="{{detail}}"></textarea>
+    </view>
+    <view class="bt-area">
+        <wxc-flex class="wrap" _pid="{{_pid}}">
+            <view class="item main">
+                <button class="btn-sub" formType="submit">提交</button>
+            </view>
+            <view class="item side">
+                <button class="reset btn-res" formType="reset">重置</button>
+            </view>
+        </wxc-flex>
+    </view>
+</form>
