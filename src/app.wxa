@@ -1,12 +1,5 @@
 <template>
-  <view>
-    <layout-head></layout-head>
 
-    <!-- wxp template -->
-    <page></page>
-
-    <layout-foot></layout-foot>
-  </view>
 </template>
 
 <script>
@@ -14,6 +7,7 @@
     config: {
       usingComponents: {
       },
+      data: {},
       pages: [
         "pages/home/index",
         "pages/generate/index",
@@ -53,7 +47,7 @@
         request: 10000
       }
     },
-    globalData: { },
+    globalData: {},
     onLaunch () {
       require('./sdk-v1.1.6')
       let clientId = '3340784c73954a8d1c2b'
