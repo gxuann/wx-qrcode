@@ -78,6 +78,7 @@
 <style>
 @import "../src/common/weui/style/weui.wxss";
 @import "../src/common/zanui/index.wxss";
+
 page {
   background-color: #EFEFF4;
   height: 100%;

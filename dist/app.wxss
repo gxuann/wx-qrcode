@@ -1,5 +1,6 @@
 @import './common/weui/style/weui.wxss';
 @import './common/zanui/index.wxss';
+
 page {
   background-color: #EFEFF4;
   height: 100%;

@@ -165,6 +165,13 @@ export default {
         console.log(res)
       }
     })
+  },
+  onShareAppMessage: function () {
+    return {
+      title: 'QR二维码',
+      path: '/pages/home/index',
+      imageUrl: 'https://images.gxuann.cn/qrcode/share.png'
+    }
   }
 }
 </script>

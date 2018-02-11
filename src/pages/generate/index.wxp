@@ -73,6 +73,13 @@ export default {
         timer
       }
     });
+  },
+  onShareAppMessage: function () {
+    return {
+      title: 'QR二维码',
+      path: '/pages/home/index',
+      imageUrl: '../../images/share.png'
+    }
   }
 }
 </script>

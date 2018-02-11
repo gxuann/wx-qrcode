@@ -32,7 +32,7 @@
                   <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
                     <view class="aboutHead">
                       <image src='https://images.gxuann.cn/qrcode/gxuann.jpg' class="gxuann" bindtap='clickGxuann'></image>
-                      <view>作者:GuangXuan</view>
+                      <view></text>by GuangXuan</view>
                       <view>Github:guangxuan126</view>
 
                     </view>
