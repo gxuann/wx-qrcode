@@ -31,7 +31,12 @@
             <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
                 <view class="aboutHead">
                     <image src="https://images.gxuann.cn/qrcode/gxuann.jpg" class="gxuann" bindtap="clickGxuann"></image>
-                    <view>by GuangXuan</view>
+                    <wxc-flex class="wrap" main="center" cross="center" _pid="{{_pid}}">
+                        <view style="margin-right:2rpx;">
+                            <image class="aboutHead_pic" src="../../images/code.png"></image>
+                        </view>
+                        <view class="aboutHead">by GuangXuan</view>
+                    </wxc-flex>
                     <view>Github:guangxuan126</view>
 
                 </view>

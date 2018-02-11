@@ -22,7 +22,7 @@
     <view class="bt-area">
       <wxc-flex class="wrap">
         <view class="item main"><button class="btn-sub" formType="submit">提交</button></view>
-        <view class="item side"><button class="reset btn-res" formType="reset">重置</button></view>
+        <view class="item side"><button class="reset btn-res" formType="reset">清空</button></view>
       </wxc-flex>
     </view>
   </form>

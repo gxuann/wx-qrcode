@@ -35,11 +35,18 @@ page,
  .versionDetail{
    font-size: 20rpx;
  }
+ .wrap{
+   display: block;
+ }
 .aboutHead{
   font-size: 15rpx;
   text-align: center;
   color: #666666;
   margin:auto;
+}
+.aboutHead_pic{
+  width: 15rpx;
+  height: 15rpx;
 }
 .gxuann{
   width: 30rpx;

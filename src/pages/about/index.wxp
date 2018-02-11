@@ -32,7 +32,10 @@
                   <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
                     <view class="aboutHead">
                       <image src='https://images.gxuann.cn/qrcode/gxuann.jpg' class="gxuann" bindtap='clickGxuann'></image>
-                      <view></text>by GuangXuan</view>
+                      <wxc-flex class="wrap" main="center" cross="center">
+                        <view style="margin-right:2rpx;"><image class="aboutHead_pic" src="../../images/code.png"></image></view>
+                        <view class="aboutHead">by GuangXuan</view>
+                      </wxc-flex>
                       <view>Github:guangxuan126</view>
 
                     </view>
@@ -164,11 +167,18 @@ page,
  .versionDetail{
    font-size: 20rpx;
  }
+ .wrap{
+   display: block;
+ }
 .aboutHead{
   font-size: 15rpx;
   text-align: center;
   color: #666666;
   margin:auto;
+}
+.aboutHead_pic{
+  width: 15rpx;
+  height: 15rpx;
 }
 .gxuann{
   width: 30rpx;
