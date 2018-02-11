@@ -1,6 +1,6 @@
 <view class="page_head">
     <view class="page_title">确认结果</view>
-    <view class="page_desc">需要转换的数据如下表，点击按钮即可获得图片</view>
+    <view class="page_desc">需要转换的数据如下表，点击按钮即生成二维码</view>
 </view>
 <view class="weui-form-preview">
     <view class="weui-form-preview__bd">
@@ -10,12 +10,12 @@
         </view>
     </view>
     <view class="weui-form-preview__ft">
-        <button class="weui-form-preview__btn weui-form-preview__btn_primary" bindtap="showLoading" disabled="{{isDisabled1}}">生成二维码</button>
+        <button class="weui-form-preview__btn weui-form-preview__btn_primary" bindtap="gen" disabled="{{isDisabled1}}">生成二维码</button>
         <button class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active" disabled="{{isDisabled}}" bindtap="save">保存二维码</button>
     </view>
 </view>
 <wxc-loading is-show="{{$loading.isShow}}" image="https://images.gxuann.cn/qrcode/logo_loading.png" slip="https://images.gxuann.cn/qrcode/slip.png" _pid="{{_pid}}"></wxc-loading>
-<view hidden="{{maskHidden}}" class="mask"></view>
+<wxc-toast is-show="{{$toast.show}}" icon="yes" _pid="{{_pid}}">保存成功</wxc-toast>
 <view class="canvas-box">
     <canvas bindtap="previewImg" hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas">
     </canvas>

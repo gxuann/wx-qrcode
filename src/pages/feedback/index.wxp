@@ -49,30 +49,54 @@ export default {
     }
   },
   formBindsubmit: function (e) {
-    if (e.detail.value.detail.length == 0 | e.detail.value.email.length == 0) {
-      this.showZanTopTips('请完善反馈信息');
-    } else {
-      let tableID = 4014
-      let Product = new wx.BaaS.TableObject(tableID)
-      let product = Product.create()
-      product.set('email', e.detail.value.email)
-      product.set('detail', e.detail.value.detail)
-      product.save().then((res) => {
-        wx.showToast({
-          title: '提交成功',
-          icon: 'success',
-          duration: 2000
-        }),
-        this.setData({
-          email: '',
-          detail: ''
+    var strEmail = e.detail.value.email;
+    var pattern= /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+    var strEmail=pattern.test(strEmail);
+    if(strEmail){
+      if (e.detail.value.detail.length == 0) {
+        this.showZanTopTips('请完善反馈信息');
+      } else {
+        let tableID = 4014
+        let Product = new wx.BaaS.TableObject(tableID)
+        let product = Product.create()
+        product.set('email', e.detail.value.email)
+        product.set('detail', e.detail.value.detail)
+        product.save().then((res) => {
+          this.setData({
+            $toast: {
+              show: true
+            }
+          })
+          setTimeout(() => {
+            this.setData({
+              $toast: {
+                show: false
+              }
+            })
+          }, 1500),
+          setTimeout(() => {
+            this.setData({
+              email: '',
+              detail: ''
+            })
+          }, 2000)
+        }, (err) => {
+          this.setData({
+            $toast2: {
+              show: true
+            }
+          })
+          setTimeout(() => {
+            this.setData({
+              $toast2: {
+                show: false
+              }
+            })
+          }, 2000)
         })
-      }, (err) => {
-        wx.showModal({
-          content: '提交失败，请检查网络设置！',
-          showCancel: false
-        })
-      })
+      }
+    }else {
+      this.showZanTopTips('请正确填写邮箱');
     }
   },
   showZanTopTips(content = '', options = {}) {

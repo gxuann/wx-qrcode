@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "wxc-loading": "../../packages/@minui/wxc-loading/dist/index"
+    "wxc-loading": "../../packages/@minui/wxc-loading/dist/index",
+    "wxc-toast": "../../packages/@minui/wxc-toast/dist/index"
   },
   "navigationBarTitleText": "QR二维码"
 }

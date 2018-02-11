@@ -1,7 +1,7 @@
 <template>
   <view class="page_head">
     <view class="page_title">确认结果</view>
-    <view class="page_desc">需要转换的数据如下表，点击按钮即可获得图片</view>
+    <view class="page_desc">需要转换的数据如下表，点击按钮即生成二维码</view>
   </view>
     <view class="weui-form-preview">
         <view class="weui-form-preview__bd">
@@ -11,7 +11,7 @@
           </view>
         </view>
       <view class="weui-form-preview__ft">
-        <button class="weui-form-preview__btn weui-form-preview__btn_primary"  bindtap="showLoading" disabled="{{isDisabled1}}" bindtap="gen">生成二维码</button>
+        <button class="weui-form-preview__btn weui-form-preview__btn_primary"  bindtap="gen" disabled="{{isDisabled1}}">生成二维码</button>
         <button class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active" disabled="{{isDisabled}}" bindtap="save">保存二维码</button>
       </view>
     </view>
@@ -20,7 +20,7 @@
     image="https://images.gxuann.cn/qrcode/logo_loading.png"
     slip="https://images.gxuann.cn/qrcode/slip.png"
   ></wxc-loading>
-  <view hidden="{{maskHidden}}" class="mask"></view>
+  <wxc-toast is-show="{{$toast.show}}" icon="yes">保存成功</wxc-toast>
   <view class="canvas-box">
     <canvas bindtap="previewImg" hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas"/>
   </view>
@@ -32,45 +32,47 @@ export default {
   config: {
     navigationBarTitleText: 'QR二维码',
     usingComponents: {
-      'wxc-loading': '@minui/wxc-loading'
+      'wxc-loading': '@minui/wxc-loading',
+      'wxc-toast': '@minui/wxc-toast'
     }
   },
   data: {
     img:"",
     $loading: {
         isShow: false
+    },
+    $toast: {
+      show: false
     }
   },
-      showLoading() {
-        this.setData({
-          $loading: {
-            isShow: true
-          }
-        })
-        setTimeout(() => {
-          this.setData({
-          $loading: {
-            isShow: false
-          }
-        })
-      }, 2000)
-      var that = this;
-      var gendetail = getApp().globalData.gendetail;
-      that.setData({
-        maskHidden:false,
-      });
-      var st = setTimeout(function(){
-        wx.hideToast()
-        var size = that.setCanvasSize();
-        that.createQrCode(gendetail,"mycanvas",size.w,size.h);
-        that.setData({
-          isDisabled:false,
-          isDisabled1:true,
-          maskHidden:true
-        });
-        clearTimeout(st);
-      },1800);
-    },
+  gen() {
+    this.setData({
+      $loading: {
+        isShow: true
+      }
+    })
+    setTimeout(() => {
+      this.setData({
+        $loading: {
+          isShow: false
+        },
+        canvasHidden:false,
+        isDisabled:false,
+        isDisabled1:true,
+      })
+    }, 2000)
+    var that = this;
+    var gendetail = getApp().globalData.gendetail;
+    that.setData({
+      canvasHidden:true,
+    });
+    var st = setTimeout(function(){
+      wx.hideToast()
+      var size = that.setCanvasSize();
+      that.createQrCode(gendetail,"mycanvas",size.w,size.h);
+      clearTimeout(st);
+    },1000);
+  },
   onLoad: function(e){
     var that = this
     var gendetail = getApp().globalData.gendetail
@@ -124,22 +126,6 @@ export default {
       urls: [img]
     })
   },
-  gen: function(e){
-    var that = this;
-    var gendetail = getApp().globalData.gendetail;
-    that.setData({
-      maskHidden:false,
-    });
-    var st = setTimeout(function(){
-      wx.hideToast()
-      var size = that.setCanvasSize();
-      that.createQrCode(gendetail,"mycanvas",size.w,size.h);
-      that.setData({
-        maskHidden:true
-      });
-      clearTimeout(st);
-    },100);
-  },
   save: function(e){
     wx.canvasToTempFilePath({
       canvasId: 'mycanvas',
@@ -149,15 +135,19 @@ export default {
           filePath: res.tempFilePath,
           success: function (data) {
             console.log(data)
-            wx.showModal({
-              title: '提示',
-              content: '保存成功',
-              showCancel: false,
-              confirmText: '确认'
+            wx.showToast({
+              title: '保存成功',
+              icon: 'success',
+              duration: 2000
             })
           },
           fail: function (err) {
             console.log(err)
+            wx.showToast({
+              title: '保存失败，请删除小程序后重新获得权限',
+              icon: 'none',
+              duration: 2000
+            })
           }
         })
       },
