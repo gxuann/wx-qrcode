@@ -1,5 +1,6 @@
 @import './common/weui/style/weui.wxss';
 @import './common/zanui/index.wxss';
+@import './common/font-awesome/font.wxss';
 
 page {
   background-color: #EFEFF4;

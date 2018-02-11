@@ -39,7 +39,7 @@ page,
    display: block;
  }
 .aboutHead{
-  font-size: 15rpx;
+  font-size: 20rpx;
   text-align: center;
   color: #666666;
   margin:auto;
@@ -49,8 +49,8 @@ page,
   height: 15rpx;
 }
 .gxuann{
-  width: 30rpx;
-  height: 30rpx;
+  width: 35rpx;
+  height: 35rpx;
 }
 .howTo_pic{
   width: 225rpx;
