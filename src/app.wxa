@@ -48,6 +48,7 @@
     },
     globalData: {
       gendetail:"",
+      getUrl:""
     },
     onLaunch () {
       require('./sdk-v1.1.6')

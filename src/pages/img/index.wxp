@@ -22,12 +22,11 @@
   ></wxc-loading>
   <wxc-toast is-show="{{$toast.show}}" icon="yes">保存成功</wxc-toast>
   <view class="canvas-box">
-    <canvas bindtap="previewImg" hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas"/>
+    <image src="{{getUrl}}" bindtap="previewImg" hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;"></image>
   </view>
 </template>
 
 <script>
-var QR = require('../../utils/qrcode.js')
 export default {
   config: {
     navigationBarTitleText: 'QR二维码',
@@ -43,7 +42,8 @@ export default {
     },
     $toast: {
       show: false
-    }
+    },
+    getUrl:''
   },
   gen() {
     this.setData({
@@ -63,15 +63,23 @@ export default {
     }, 2000)
     var that = this;
     var gendetail = getApp().globalData.gendetail;
-    that.setData({
-      canvasHidden:true,
-    });
-    var st = setTimeout(function(){
-      wx.hideToast()
-      var size = that.setCanvasSize();
-      that.createQrCode(gendetail,"mycanvas",size.w,size.h);
-      clearTimeout(st);
-    },1000);
+    var getUrl = getApp().globalData.getUrl;
+    wx.request({
+      url: 'https://qrcode.gxuann.cn/url.php',
+      data:{
+        detail:gendetail
+      },
+      method: 'GET',
+      header: { 'content-type': 'application/x-www-form-urlencoded' },
+      success: function (res) {
+        getApp().globalData.getUrl = res.data
+        that.setData({
+          getUrl: getApp().globalData.getUrl,
+          canvasHidden:true,
+        })
+        console.log(getUrl)
+      },
+    })
   },
   onLoad: function(e){
     var that = this
@@ -82,44 +90,9 @@ export default {
       isDisabled: true,
       isDisabled1:false,
     });
-    var size = this.setCanvasSize();
-  },
-  setCanvasSize:function(){
-    var size={};
-    try {
-        var res = wx.getSystemInfoSync();
-        var scale = 750/686;
-        var width = res.windowWidth/scale;
-        var height = width;
-        size.w = width;
-        size.h = height;
-      } catch (e) {
-        console.log("获取设备信息失败"+e);
-      }
-    return size;
-  } ,
-  createQrCode:function(gendetail,canvasId,cavW,cavH){
-    QR.api.draw(gendetail,canvasId,cavW,cavH);
-    setTimeout(() => { this.canvasToTempImage();},1000);
-  },
-  canvasToTempImage:function(){
-    var that = this;
-    wx.canvasToTempFilePath({
-      canvasId: 'mycanvas',
-      success: function (res) {
-          var tempFilePath = res.tempFilePath;
-          console.log(tempFilePath);
-          that.setData({
-              imagePath:tempFilePath,
-          });
-      },
-      fail: function (res) {
-          console.log(res);
-      }
-    });
   },
   previewImg:function(e){
-    var img = this.data.imagePath;
+    var img = getApp().globalData.getUrl;
     console.log(img);
     wx.previewImage({
       current: 'img',
@@ -127,10 +100,11 @@ export default {
     })
   },
   save: function(e){
-    wx.canvasToTempFilePath({
-      canvasId: 'mycanvas',
-      success: function (res) {
-        var tempFilePath = res.tempFilePath
+    var that = this;
+    wx.downloadFile({
+      url: getApp().globalData.getUrl,
+      success: function(res){
+        var filePath = res.tempFilePath
         wx.saveImageToPhotosAlbum({
           filePath: res.tempFilePath,
           success: function (data) {
@@ -150,11 +124,9 @@ export default {
             })
           }
         })
-      },
-      fail: function (res) {
-        console.log(res)
       }
     })
+
   },
   onShareAppMessage: function () {
     return {
