@@ -5,7 +5,7 @@
 <view class="zan-toptips {{ zanTopTips.show ? 'zan-toptips--show' : '' }}">{{ zanTopTips.content }}</view>
 <form bindsubmit="formBindsubmit" bindreset="formReset">
     <view>
-        <textarea class="input-area" name="detail" type="text" maxlength="255" placeholder="请输入要转换的数据，不支持图片和emoji表情（255字符内）" value="{{detail}}"></textarea>
+        <textarea class="input-area" name="detail" type="text" maxlength="255" placeholder="请输入要转换的数据（255字符内）" value="{{detail}}"></textarea>
     </view>
     <view class="bt-area">
         <wxc-flex class="wrap" _pid="{{_pid}}">
