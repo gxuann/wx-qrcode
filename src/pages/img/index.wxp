@@ -49,16 +49,16 @@ export default {
     this.setData({
       $loading: {
         isShow: true
-      }
+      },
+      isDisabled1:true,
     })
     setTimeout(() => {
       this.setData({
         $loading: {
           isShow: false
         },
-        canvasHidden:false,
         isDisabled:false,
-        isDisabled1:true,
+        canvasHidden:false,
       })
     }, 2000)
     var that = this;
