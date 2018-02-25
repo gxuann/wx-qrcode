@@ -1,5 +1,4 @@
 # wx-qrcode
-## [请转至正式版分支](https://github.com/guangxuan126/wx-qrcode/tree/master)
 
 微信小程序，使用这个小程序可以轻松地将任何数据转换成二维码。<br>
 
@@ -8,18 +7,34 @@
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
 ---
+### 介绍
 
 使用这个小程序可以轻松生成二维码
-![](http://images.gxuann.cn/github/intro_n.png)
-
+![](https://images.gxuann.cn/github/intro_1.png)
+![](https://images.gxuann.cn/github/intro_2.png)
+![](https://images.gxuann.cn/github/intro_3.png)
 输入任何字符即可转换，注意**不超过255个字符**.<br>
 这个小程序基于微信运行，请下载最新版本的微信，然后在`微信-发现-小程序`中打开.<br>
-或者保存下面这个二维码至相册中，然后在微信中扫一扫即可打开.<br>
-![](https://images.gxuann.cn/github/qr.jpeg)
+或者在微信中扫一扫中扫描下面任意二维码即可.<br>
+![](https://images.gxuann.cn/archives/gh_db3301df811e_258.jpg)
+![](https://images.gxuann.cn/archives/gh_db3301df811e_258_normal.jpg)
 <br>
 
----
+**欢迎star 欢迎fork**
 
+### LICENSE
+MIT
+
+---
+### ChangeLog
+
+V3.1<br>
+1.生成二维码的内容里支持emoji了<br>
+
+V3.0<br>
+1.重新设计的UI
+2.支持FontAwesome字体
+3.天假了扫描二维码的功能<br>
 
 V2.5<br>
 1.修复反馈功能提交失败的bug。<br>
@@ -46,9 +61,4 @@ V2.0<br>
 V1.1<br>
 修复文本错误
 
-
 ---
-
-<br>
-
-**如果喜欢这个小程序，请为我加一颗星~**
