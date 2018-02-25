@@ -7,7 +7,7 @@
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
 ---
-### 介绍
+## 介绍
 
 使用这个小程序可以轻松生成二维码
 ![](/img/intro_1.png)
@@ -22,11 +22,11 @@
 
 **欢迎star 欢迎fork**<br><br>
 
-### LICENSE
+## LICENSE
 MIT
 
 ---
-### ChangeLog
+## ChangeLog
 
 V3.1<br>
 1.生成二维码的内容里支持emoji了<br>
