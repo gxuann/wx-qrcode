@@ -10,9 +10,9 @@
 ### 介绍
 
 使用这个小程序可以轻松生成二维码
-![](https://images.gxuann.cn/github/intro_1.png)
-![](https://images.gxuann.cn/github/intro_2.png)
-![](https://images.gxuann.cn/github/intro_3.png)
+![](https://images.gxuann.cn/github/intro_1.png)<br>
+![](https://images.gxuann.cn/github/intro_2.png)<br>
+![](https://images.gxuann.cn/github/intro_3.png)<br>
 输入任何字符即可转换，注意**不超过255个字符**.<br>
 这个小程序基于微信运行，请下载最新版本的微信，然后在`微信-发现-小程序`中打开.<br>
 或者在微信中扫一扫中扫描下面任意二维码即可.<br>
