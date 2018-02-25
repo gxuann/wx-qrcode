@@ -10,7 +10,7 @@
 ## 介绍
 
 使用这个小程序可以轻松生成二维码
-![](https://images.gxuann.cn/github/intro_2.png)<br>
+![](https://images.gxuann.cn/github/intro_1.png)<br>
 ![](https://images.gxuann.cn/github/intro_2.png)<br>
 ![](https://images.gxuann.cn/github/intro_3.png)<br>
 输入任何字符即可转换，注意**不超过255个字符**.<br>
