@@ -32,8 +32,7 @@
                   <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
                     <view class="aboutHead">
                       <image src='https://images.gxuann.cn/qrcode/gxuann.jpg' class="gxuann" bindtap='clickGxuann'></image>
-                      <view><text class="fa fa-code"></text> with <text class="fa fa-heart"></text> by GuangXuan</view>
-                      <view><text class="fa fa-github"></text>: guangxuan126</view>
+                      <view><image src='../../images/foot.png' class="foot"></image></view>
 
                     </view>
                     <wxc-loadmore is-end="{{true}}" text="·"></wxc-loadmore>
@@ -44,7 +43,6 @@
                       <view class="versionDetail">- 生成二维码的内容里支持emoji了</view>
                       <view class="versionNum">v3.0</view>
                       <view class="versionDetail">- 重新设计了界面:结合使用了MinUI & WeUI</view>
-                      <view class="versionDetail">- 支持FontAwesome字体</view>
                       <view class="versionDetail">- 添加了扫描二维码的功能</view>
                       <view class="versionNum">v2.8</view>
                       <view class="versionDetail">- 更新了分享页面的图片</view>
@@ -191,5 +189,9 @@ page,
 .share{
   font-size: 20rpx;
   margin-bottom: 20rpx;
+}
+.foot{
+  width: 197px;
+  height: 54px;
 }
 </style>

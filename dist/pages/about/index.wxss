@@ -60,3 +60,7 @@ page,
   font-size: 20rpx;
   margin-bottom: 20rpx;
 }
+.foot{
+  width: 197rpx;
+  height: 54rpx;
+}
