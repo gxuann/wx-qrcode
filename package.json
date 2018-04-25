@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
-    "@minui/wxc-cc": "^1.0.1",
+    "@minui/wxc-cc": "^1.0.3",
     "@minui/wxc-elip": "^1.0.5",
     "@minui/wxc-flex": "^1.0.3",
     "@minui/wxc-icon": "^1.0.6",

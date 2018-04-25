@@ -9,17 +9,18 @@
       },
       pages: [
         "pages/home/index",
-        "pages/generate/index",
         "pages/about/index",
+        "pages/generate/index",
         "pages/img/index",
         "pages/scanrs/index",
-        "pages/feedback/index"
+        "pages/feedback/index",
+        "pages/menu/index"
       ],
       window: {
         backgroundTextStyle: 'dark',
         backgroundColor: '#efeff4',
         navigationBarBackgroundColor: '#ffffff',
-        navigationBarTitleText: 'MinUI',
+        navigationBarTitleText: '',
         navigationBarTextStyle: 'black'
       },
       tabBar: {
@@ -29,7 +30,7 @@
         "backgroundColor": "#ffffff",
         "list": [
           {
-            "pagePath": "pages/home/index",
+            "pagePath": "pages/menu/index",
             "text": "主页",
             "iconPath": "images/home.png",
             "selectedIconPath": "images/home1.png"

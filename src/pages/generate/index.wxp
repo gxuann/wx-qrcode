@@ -77,7 +77,7 @@ export default {
   onShareAppMessage: function () {
     return {
       title: 'QR二维码',
-      path: '/pages/home/index',
+      path: '/pages/menu/index',
       imageUrl: '../../images/share.png'
     }
   }

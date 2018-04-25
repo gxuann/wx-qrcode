@@ -37,8 +37,10 @@
                     </view>
                     <wxc-loadmore is-end="{{true}}" text="·"></wxc-loadmore>
                     <wxc-label class="versionLabel" type="fill" type-color="#a6d3ff">当前版本</wxc-label>
-                    <wxc-label class="versionLabel" type="fill" type-color="#ff5349">v3.1</wxc-label>
+                    <wxc-label class="versionLabel" type="fill" type-color="#ff5349">v3.2</wxc-label>
                     <view class="versionGroup">
+                      <view class="versionNum">v3.2</view>
+                      <view class="versionDetail">- 添加启动页</view>
                       <view class="versionNum">v3.1</view>
                       <view class="versionDetail">- 生成二维码的内容里支持emoji了</view>
                       <view class="versionNum">v3.0</view>
@@ -120,7 +122,7 @@ export default {
   onShareAppMessage: function () {
     return {
       title: 'QR二维码',
-      path: '/pages/home/index',
+      path: '/pages/menu/index',
       imageUrl: 'https://images.gxuann.cn/qrcode/share.png'
     }
   }
