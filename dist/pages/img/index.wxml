@@ -16,6 +16,7 @@
 </view>
 <wxc-loading is-show="{{$loading.isShow}}" image="https://images.gxuann.cn/qrcode/logo_loading.png" slip="https://images.gxuann.cn/qrcode/slip.png" _pid="{{_pid}}"></wxc-loading>
 <wxc-toast is-show="{{$toast.show}}" icon="yes" _pid="{{_pid}}">保存成功</wxc-toast>
+<wxc-toast is-show="{{$toast2.show}}" icon="no" _pid="{{_pid}}">生成失败，这可能是由于服务器的网络问题，请稍后再试</wxc-toast>
 <view class="canvas-box">
     <image src="{{getUrl}}" bindtap="previewImg" hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;"></image>
 </view>

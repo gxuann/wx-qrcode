@@ -4,7 +4,7 @@
 </view>
 <view class="zan-toptips {{ zanTopTips.show ? 'zan-toptips--show' : '' }}">{{ zanTopTips.content }}</view>
 <wxc-toast is-show="{{$toast.show}}" icon="yes" _pid="{{_pid}}">提交成功</wxc-toast>
-<wxc-toast is-show="{{$toast2.show}}" icon="no" _pid="{{_pid}}">提交失败，请检查网络</wxc-toast>
+<wxc-toast is-show="{{$toast2.show}}" icon="no" _pid="{{_pid}}">提交失败，这可能是由于您或者服务器的网络暂时不可用</wxc-toast>
 <form bindsubmit="formBindsubmit" bindreset="formReset">
     <view class="weui-cell weui-cell_input">
         <view class="weui-cell__hd">
@@ -16,7 +16,7 @@
     </view>
     <view class="input-area">
         <view class="section__title">内容</view>
-        <textarea name="detail" type="text" maxlength="-1" placeholder="请在这里输入反馈内容" value="{{detail}}"></textarea>
+        <textarea name="detail" maxlength="-1" placeholder="请在这里输入反馈内容" value="{{detail}}"></textarea>
     </view>
     <view class="bt-area">
         <wxc-flex class="wrap" _pid="{{_pid}}">

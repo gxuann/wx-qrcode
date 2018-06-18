@@ -5,7 +5,7 @@
   </view>
   <view class="zan-toptips {{ zanTopTips.show ? 'zan-toptips--show' : '' }}">{{ zanTopTips.content }}</view>
   <wxc-toast is-show="{{$toast.show}}" icon="yes">提交成功</wxc-toast>
-  <wxc-toast is-show="{{$toast2.show}}" icon="no">提交失败，请检查网络</wxc-toast>
+  <wxc-toast is-show="{{$toast2.show}}" icon="no">提交失败，这可能是由于您或者服务器的网络暂时不可用</wxc-toast>
   <form bindsubmit="formBindsubmit" bindreset="formReset">
     <view class="weui-cell weui-cell_input">
       <view class="weui-cell__hd">
@@ -17,7 +17,7 @@
     </view>
     <view class="input-area">
       <view class="section__title">内容</view>
-      <textarea name="detail" type="text" maxlength="-1" placeholder="请在这里输入反馈内容" value='{{detail}}'></textarea>
+      <textarea name="detail" maxlength="-1" placeholder="请在这里输入反馈内容" value='{{detail}}'></textarea>
     </view>
     <view class="bt-area">
       <wxc-flex class="wrap">
@@ -26,6 +26,7 @@
       </wxc-flex>
     </view>
   </form>
+
 </template>
 
 <script>
@@ -52,47 +53,57 @@ export default {
     var strEmail = e.detail.value.email;
     var pattern= /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
     var strEmail=pattern.test(strEmail);
+    var that = this;
+    var fb_detail = e.detail.value.detail;
+    var fb_email = e.detail.value.email;
     if(strEmail){
       if (e.detail.value.detail.length == 0) {
         this.showZanTopTips('请完善反馈信息');
       } else {
-        let tableID = 4014
-        let Product = new wx.BaaS.TableObject(tableID)
-        let product = Product.create()
-        product.set('email', e.detail.value.email)
-        product.set('detail', e.detail.value.detail)
-        product.save().then((res) => {
-          this.setData({
-            $toast: {
-              show: true
-            }
-          })
+        wx.request({
+          url: 'https://qrcode.gxuann.cn/feedback.php',
+          data: {
+            fb_email:fb_email,
+            fb_detail:fb_detail,
+          },
+          method: 'GET',
+          header: { 'content-type': 'application/x-www-form-urlencoded' },
+          success: function(res){
+            console.log(fb_email,fb_detail)
+            console.log(res.data)
+            that.setData({
+             $toast: {
+                show: true
+              }
+            })
           setTimeout(() => {
-            this.setData({
+            that.setData({
               $toast: {
                 show: false
               }
             })
           }, 1500),
           setTimeout(() => {
-            this.setData({
+            that.setData({
               email: '',
               detail: ''
             })
           }, 2000)
-        }, (err) => {
-          this.setData({
+          },
+          fail: function(res){
+            that.setData({
             $toast2: {
               show: true
             }
           })
           setTimeout(() => {
-            this.setData({
+            that.setData({
               $toast2: {
                 show: false
               }
             })
-          }, 2000)
+          }, 5000)
+          }  
         })
       }
     }else {
@@ -127,7 +138,8 @@ export default {
         timer
       }
     });
-  }
+  },
+
 }
 </script>
 

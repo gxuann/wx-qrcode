@@ -21,6 +21,7 @@
     slip="https://images.gxuann.cn/qrcode/slip.png"
   ></wxc-loading>
   <wxc-toast is-show="{{$toast.show}}" icon="yes">保存成功</wxc-toast>
+  <wxc-toast is-show="{{$toast2.show}}" icon="no">生成失败，这可能是由于服务器的网络问题，请稍后再试</wxc-toast>
   <view class="canvas-box">
     <image src="{{getUrl}}" bindtap="previewImg" hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;"></image>
   </view>
@@ -79,6 +80,21 @@ export default {
         })
         console.log(getUrl)
       },
+      fail: function(res){
+            that.setData({
+            $toast2: {
+              show: true
+            },
+            isDisabled:true,
+          })
+         setTimeout(() => {
+            that.setData({
+              $toast2: {
+                show: false
+              }
+            })
+         }, 5000)
+      }
     })
   },
   onLoad: function(e){

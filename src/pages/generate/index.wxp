@@ -18,7 +18,6 @@
 </template>
 
 <script>
-var QR = require("../../utils/qrcode.js");
 export default {
   config: {
     navigationBarTitleText: 'QR二维码',

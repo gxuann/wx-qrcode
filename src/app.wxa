@@ -52,10 +52,6 @@
       getUrl:""
     },
     onLaunch () {
-      require('./sdk-v1.1.6')
-      let clientId = '3340784c73954a8d1c2b'
-      wx.BaaS.init(clientId)
-
       wx.getSetting({
       success (res) {
         if (!res.authSetting['scope.writePhotosAlbum']) {
