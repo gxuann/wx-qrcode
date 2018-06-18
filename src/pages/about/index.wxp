@@ -41,6 +41,7 @@
                     <view class="versionGroup">
                       <view class="versionNum">v3.3</view>
                       <view class="versionDetail">- 优化反馈功能</view>
+                      <view class="versionDetail">- 增加无网络情况下的提示</view>
                       <view class="versionNum">v3.2</view>
                       <view class="versionDetail">- 添加启动页</view>
                       <view class="versionNum">v3.1</view>
