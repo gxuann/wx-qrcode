@@ -93,7 +93,7 @@ export default {
                 show: false
               }
             })
-         }, 5000)
+         }, 20000)
       }
     })
   },
