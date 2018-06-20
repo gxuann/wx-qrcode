@@ -73,12 +73,13 @@ export default {
       method: 'GET',
       header: { 'content-type': 'application/x-www-form-urlencoded' },
       success: function (res) {
+        console.log(getUrl)
         getApp().globalData.getUrl = res.data
         that.setData({
           getUrl: getApp().globalData.getUrl,
           canvasHidden:true,
         })
-        console.log(getUrl)
+        
       },
       fail: function(res){
             that.setData({
