@@ -5,7 +5,11 @@
   <view class="button"><button type="default" bindtap="toGenerate"><wxc-icon size="100%" type="edit"></wxc-icon> 生成二维码</button></view>
   <view class="button"><button type="default" bindtap="toScan"><wxc-icon size="100%" type="scan"></wxc-icon> 扫描二维码</button></view>
   <navigator target="miniProgram" open-type="navigate" app-id="wx8abaf00ee8c3202e" extra-data="{{ extraData }}" version="release"><view class="button"><button type="default"><wxc-icon size="100%" type="feedback"></wxc-icon> 反馈系统</button></view></navigator>
+  <view class="ad">
+<ad unit-id="adunit-6df5733af157778b"></ad>
+</view>
 </wxc-flex>
+
 </template>
 
 <script>
@@ -48,11 +52,21 @@ export default {
 .logo_text{
   text-align: center;
   font-size: 20rpx;
-  margin-bottom: 150rpx;
+  margin-bottom: 130rpx;
   color: #999999;
 }
 .button{
   width: 90%;
   margin: 10rpx auto;
+}
+.ad{
+  display: flex;
+  flex: 1;
+  position: relative;
+  width: 90%;
+  padding-top: 20rpx;
+  margin-bottom: 5rpx;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 </style>

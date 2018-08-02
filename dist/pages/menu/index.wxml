@@ -15,4 +15,7 @@
                 <wxc-icon size="100%" type="feedback" _pid="{{_pid}}"></wxc-icon> 反馈系统</button>
         </view>
     </navigator>
+    <view class="ad">
+        <ad unit-id="adunit-6df5733af157778b"></ad>
+    </view>
 </wxc-flex>
