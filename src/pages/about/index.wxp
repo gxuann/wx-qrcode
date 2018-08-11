@@ -37,8 +37,10 @@
                     </view>
                     <wxc-loadmore is-end="{{true}}" text="·"></wxc-loadmore>
                     <wxc-label class="versionLabel" type="fill" type-color="#a6d3ff">当前版本</wxc-label>
-                    <wxc-label class="versionLabel" type="fill" type-color="#ff5349">v3.4</wxc-label>
+                    <wxc-label class="versionLabel" type="fill" type-color="#ff5349">v3.5</wxc-label>
                     <view class="versionGroup">
+                      <view class="versionNum">v3.5</view>
+                      <view class="versionDetail">- 修复反馈系统</view>
                       <view class="versionNum">v3.4</view>
                       <view class="versionDetail">- 反馈系统接入「吐个槽社区」</view>
                       <view class="versionNum">v3.3</view>

@@ -21,13 +21,19 @@ export default {
       'wxc-icon': '@minui/wxc-icon'
     }
   },
-  data: {},
+  data: {
+    extraData: {
+      id: '31640',
+    }
+  },
   toGenerate: function(e){
     wx.navigateTo({
       url: '../../pages/generate/index'
     })
   },
-  onLoad:function(){},
+  onLoad:function(){
+    
+  },
   toScan: function(e){
     wx.navigateTo({
       url: '../../pages/scanrs/index'
