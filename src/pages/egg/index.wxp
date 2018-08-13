@@ -1,0 +1,30 @@
+<template>
+  <view class="eggBox">
+    哇！你发现了什么？
+  </view>
+</template>
+
+<script>
+export default {
+  config: {
+    navigationBarTitleText: '……',
+    navigationBarBackgroundColor: '#eaeaea',
+    usingComponents: {}
+  },
+  data: {}
+}
+</script>
+
+<style>
+page{
+  background: #eaeaea
+}
+.eggBox{
+  position: relative;
+  height: 400rpx;
+  background: #fff;
+  border-radius: 13rpx;
+  box-shadow: 1rpx 1rpx 50rpx 5rpx #eaeaea;
+  margin: 70rpx 70rpx;
+}
+</style>

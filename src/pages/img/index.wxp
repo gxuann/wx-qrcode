@@ -79,7 +79,7 @@ export default {
           getUrl: getApp().globalData.getUrl,
           canvasHidden:true,
         })
-        
+        wx.vibrateShort()
       },
       fail: function(res){
             that.setData({

@@ -30,10 +30,9 @@
                     </view>
                   </view>
                   <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
-                    <view class="aboutHead">
-                      <image src='https://images.gxuann.cn/qrcode/gxuann.jpg' class="gxuann" bindtap='clickGxuann'></image>
+                    <view class="aboutHead" bindtap="isTap">
+                      <image src='https://images.gxuann.cn/qrcode/gxuann.jpg' class="gxuann"></image>
                       <view><image src='../../images/foot.png' class="foot"></image></view>
-
                     </view>
                     <wxc-loadmore is-end="{{true}}" text="·"></wxc-loadmore>
                     <wxc-label class="versionLabel" type="fill" type-color="#a6d3ff">当前版本</wxc-label>
@@ -102,6 +101,7 @@ export default {
       activeIndex: 0,
       sliderOffset: 0,
       sliderLeft: 0,
+      isEgg: 0,
   },
   onLoad: function () {
     var that = this;
@@ -120,11 +120,77 @@ export default {
           activeIndex: e.currentTarget.id
       });
   },
-  clickGxuann: function(e){
-    wx.previewImage({
-      current: 'https://images.gxuann.cn/qrcode.jpg',
-      urls: ['https://images.gxuann.cn/qrcode.jpg']
+  isTap: function(e){
+    var that = this;
+    var isEgg =this.data.isEgg;
+    wx.vibrateShort({
+      success: function(e) {
+        if (isEgg < 7) {
+          that.setData({
+            isEgg: isEgg + 1,
+        })
+        }
+        switch (isEgg) {
+          case 1:
+            wx.showToast({
+              title: '嗯？🤔',
+              icon: 'none',
+              duration: 1000
+            })
+            break;
+          case 2:
+            wx.showToast({
+              title: '嗯!😶',
+              icon: 'none',
+              duration: 1000
+            })
+            break;
+          case 3:
+            wx.showToast({
+              title: 'What？😮',
+              icon: 'none',
+              duration: 1000
+            })
+            break;
+          case 4:
+            wx.showToast({
+              title: '这里没有东西！😑',
+              icon: 'none',
+              duration: 1000
+            })
+            break;
+          case 5:
+            wx.showToast({
+              title: '别点了 😵',
+              icon: 'none',
+              duration: 1000
+            })
+            break;
+          case 6:
+            wx.showToast({
+              title: 'congratulations！👏',
+              icon: 'none',
+              duration: 1000
+            })
+            break;
+          default:
+            wx.showToast({
+              title: '……',
+              icon: 'none',
+              duration: 1000
+            })
+            break;
+        }
+      }
     })
+    if (isEgg >= 6) {
+      setTimeout(function () {
+        wx.navigateTo({
+          url: '../../pages/egg/index'
+        }) 
+      }, 1000)
+    }
+    console.log(isEgg);
   },
   onShareAppMessage: function () {
     return {

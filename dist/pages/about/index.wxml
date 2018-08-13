@@ -29,12 +29,11 @@
                 </view>
             </view>
             <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
-                <view class="aboutHead">
-                    <image src="https://images.gxuann.cn/qrcode/gxuann.jpg" class="gxuann" bindtap="clickGxuann"></image>
+                <view class="aboutHead" bindtap="isTap">
+                    <image src="https://images.gxuann.cn/qrcode/gxuann.jpg" class="gxuann"></image>
                     <view>
                         <image src="../../images/foot.png" class="foot"></image>
                     </view>
-
                 </view>
                 <wxc-loadmore is-end="{{true}}" text="·" _pid="{{_pid}}"></wxc-loadmore>
                 <wxc-label class="versionLabel" type="fill" type-color="#a6d3ff" _pid="{{_pid}}">当前版本</wxc-label>
