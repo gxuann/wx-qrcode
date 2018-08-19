@@ -1,11 +1,19 @@
 page{
-  background: #eaeaea
+  background: #f9f9f9
+}
+.bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 144rpx;
+  z-index: -1;
 }
 .eggBox{
   position: relative;
   height: 400rpx;
   background: #fff;
   border-radius: 13rpx;
-  box-shadow: 1rpx 1rpx 50rpx 5rpx #eaeaea;
+  box-shadow: 1rpx 1rpx 50rpx 10rpx #eaeaea;
   margin: 70rpx 70rpx;
 }
