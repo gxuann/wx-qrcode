@@ -1,7 +1,8 @@
 <template>
   <image class="bg" src="../../images/bg.png"></image>
   <view class="eggBox">
-    哇！你发现了什么？
+    <text class="text">\n 哇！你发现了什么？\n 你来到了一个未知的页面…\n\n</text>
+    <image class="egg" src="https://qrcode.gxuann.cn/egg.png">
   </view>
 </template>
 
@@ -20,7 +21,8 @@ export default {
 
 <style>
 page{
-  background: #f9f9f9
+  background: #f9f9f9;
+  height: 100%;
 }
 .bg {
   position: absolute;
@@ -32,10 +34,20 @@ page{
 }
 .eggBox{
   position: relative;
-  height: 400rpx;
+  height: 900rpx;
+  width: 80%;
   background: #fff;
   border-radius: 13rpx;
   box-shadow: 1rpx 1rpx 50rpx 10rpx #eaeaea;
-  margin: 70rpx 70rpx;
+  margin: 10%;
+  text-align: center;
 }
+.text{
+  font-size: 35rpx;
+}
+.egg{
+  height: 600rpx;
+  width: 450rpx;
+}
+
 </style>

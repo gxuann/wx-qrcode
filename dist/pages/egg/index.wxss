@@ -1,5 +1,6 @@
 page{
-  background: #f9f9f9
+  background: #f9f9f9;
+  height: 100%;
 }
 .bg {
   position: absolute;
@@ -11,9 +12,18 @@ page{
 }
 .eggBox{
   position: relative;
-  height: 400rpx;
+  height: 900rpx;
+  width: 80%;
   background: #fff;
   border-radius: 13rpx;
   box-shadow: 1rpx 1rpx 50rpx 10rpx #eaeaea;
-  margin: 70rpx 70rpx;
+  margin: 10%;
+  text-align: center;
+}
+.text{
+  font-size: 35rpx;
+}
+.egg{
+  height: 600rpx;
+  width: 450rpx;
 }

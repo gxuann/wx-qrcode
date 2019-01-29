@@ -29,7 +29,7 @@
                 </view>
             </view>
             <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
-                <view class="aboutHead" bindtap="isTap">
+                <view class="aboutHead" bindtap="isTap" disabled:true="">
                     <image src="https://images.gxuann.cn/qrcode/gxuann.jpg" class="gxuann"></image>
                     <view>
                         <image src="../../images/foot.png" class="foot"></image>
@@ -37,8 +37,10 @@
                 </view>
                 <wxc-loadmore is-end="{{true}}" text="·" _pid="{{_pid}}"></wxc-loadmore>
                 <wxc-label class="versionLabel" type="fill" type-color="#a6d3ff" _pid="{{_pid}}">当前版本</wxc-label>
-                <wxc-label class="versionLabel" type="fill" type-color="#ff5349" _pid="{{_pid}}">v3.5</wxc-label>
+                <wxc-label class="versionLabel" type="fill" type-color="#ff5349" _pid="{{_pid}}">v3.6</wxc-label>
                 <view class="versionGroup">
+                    <view class="versionNum">v3.6</view>
+                    <view class="versionDetail">- 添加了一个彩蛋</view>
                     <view class="versionNum">v3.5</view>
                     <view class="versionDetail">- 修复反馈系统</view>
                     <view class="versionNum">v3.4</view>

@@ -7,9 +7,7 @@
     <view class="scan_pic">
         <wxc-icon size="150" type="scan" color="#ff5349" bindtap="scan" _pid="{{_pid}}"></wxc-icon>
         <view>
-            <view>
-                <textarea name="rs" class="textarea" disabled="{{rs_sta}}" maxlength="-1" selectable="true" value="{{rs}}"></textarea>
-            </view>
+            <view><textarea name="rs" class="textarea" disabled="{{rs_sta}}" maxlength="-1" selectable="true" value="{{rs}}"></textarea></view>
         </view>
     </view>
 </wxc-flex>
