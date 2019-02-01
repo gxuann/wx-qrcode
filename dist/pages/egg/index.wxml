@@ -1,6 +1,6 @@
 <image class="bg" src="../../images/bg.png"></image>
 <view class="eggBox">
     <text class="text">\n 哇！你发现了什么？\n 你来到了一个未知的页面…\n\n</text>
-    <image class="egg" src="https://qrcode.gxuann.cn/egg.png">
+    <image class="egg" src="{{eggUrl}}">
     </image>
 </view>

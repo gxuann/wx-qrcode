@@ -2,7 +2,7 @@
   <image class="bg" src="../../images/bg.png"></image>
   <view class="eggBox">
     <text class="text">\n 哇！你发现了什么？\n 你来到了一个未知的页面…\n\n</text>
-    <image class="egg" src="https://qrcode.gxuann.cn/egg.png">
+    <image class="egg" src="{{eggUrl}}">
   </view>
 </template>
 
@@ -15,6 +15,44 @@ export default {
   },
   data: {
     isShow: false,
+    eggUrl: ''
+  },
+  onLoad: function(e){
+    wx.clearStorage()
+    var that = this
+    wx.request({
+      url: 'https://qrcode.gxuann.cn/egg.php',
+      data: {
+        eggUrl:'egg'
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success(res) {
+        console.log(res.data)
+        that.setData({
+          eggUrl: res.data
+        });
+      }
+    })
+  },
+  onSHow: function (e) {
+    var that = this
+    wx.request({
+      url: 'https://qrcode.gxuann.cn/egg.php',
+      data: {
+        eggUrl:'egg'
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success(res) {
+        console.log(res.data)
+        that.setData({
+          eggUrl: res.data
+        });
+      }
+    })
   }
 }
 </script>

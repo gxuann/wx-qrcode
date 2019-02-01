@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/menu/index",
     "pages/home/index",
+    "pages/menu/index",
     "pages/about/index",
     "pages/generate/index",
     "pages/img/index",
@@ -38,5 +38,8 @@
   },
   "networkTimeout": {
     "request": 10000
-  }
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx8abaf00ee8c3202e"
+  ]
 }
