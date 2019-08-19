@@ -1,0 +1,81 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.8.0",
+	"appid": "wx787e617292200efe",
+	"projectname": "wxapp-qrcode",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 4,
+			"list": [
+				{
+					"id": -1,
+					"name": "menu",
+					"pathName": "pages/menu/menu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "scan",
+					"pathName": "pages/scan/scan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "generate",
+					"pathName": "pages/generate/generate",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "img",
+					"pathName": "pages/img/img",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "about",
+					"pathName": "pages/about/about",
+					"scene": null
+				}
+			]
+		}
+	}
+}

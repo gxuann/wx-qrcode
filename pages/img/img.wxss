@@ -1,0 +1,34 @@
+/* pages/img/img.wxss */
+
+.page_head{
+  margin-top: 100rpx;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+}
+.page_title{
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+.page_desc{
+  font-size: 28rpx;
+  color: #666666;
+  margin-bottom: 40rpx;
+}
+
+.content {
+  padding: 20px;
+  font-size: 16px;
+}
+.footer {
+  text-align: right;
+}
+.qrcode{
+  text-align: center;
+}
+
+.qr-img{
+  width: 400rpx;
+  height: 400rpx;
+}

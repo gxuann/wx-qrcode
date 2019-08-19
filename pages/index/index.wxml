@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="logo">
+  <image class="logo_pic" src="../../images/wel_logo.png"></image>
+</view>

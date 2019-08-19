@@ -1,0 +1,41 @@
+/* pages/generate/generate.wxss */
+@import "../../colorui/main.wxss";
+page{
+  background-color: #efeff4;
+}
+.page_head{
+  margin-top: 100rpx;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+}
+.page_title{
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+.page_desc{
+  font-size: 28rpx;
+  color: #666666;
+  margin-bottom: 40rpx;
+}
+.input-area{
+  background-color: #fff;
+  padding: 15rpx;
+  display: block;
+  text-align: left;
+  width: 90%;
+  height: 400rpx;
+  margin: 50rpx auto; 
+}
+.btn-area{
+  display: flex;
+  padding: 5%;
+}
+.btn-sub{
+  width: 70%;
+  margin-right: 50rpx;
+}
+.bt-cln{
+  width: 30%;
+}

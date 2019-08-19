@@ -1,0 +1,11 @@
+<!--pages/menu/menu.wxml-->
+<view class="logo">
+  <image class="logo-pic" src="../../images/logo.png"></image>
+</view>
+<view class="logo-text">轻松地将任何数据转换成二维码</view>
+
+<view class="button-area">
+<van-button class="opt-button shadow-warp" icon="{{item.icon}}" size="large" type="default" wx:for="{{elements}}" wx:key bind:click="{{item.action}}"> {{item.title}}</van-button>
+<van-button class="opt-button shadow-warp" icon="smile-comment-o" size="large" type="default" open-type="feedback"> 反馈系统</van-button>
+</view>
+<van-button class="auth-button shadow-warp" icon="award-o" size="small" type="default" open-type="openSetting">权限管理</van-button>

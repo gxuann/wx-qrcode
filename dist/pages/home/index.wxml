@@ -1,5 +1,0 @@
-<wxc-cc class="logo" _pid="{{_pid}}">
-    <view class="logo__wrapper">
-        <image class="logo_pic" src="../../images/wel_logo.png"></image>
-    </view>
-</wxc-cc>

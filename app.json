@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/menu/menu",
+    "pages/index/index",
+    "pages/about/about",
+    "pages/scan/scan",
+    "pages/generate/generate",
+    "pages/img/img"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#efeff4",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "QR二维码",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7b7f84",
+    "selectedColor": "#a6d3ff",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/menu/menu",
+        "text": "主页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home1.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "images/help.png",
+        "selectedIconPath": "images/help1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-row": "vantui/row/index",
+    "van-col": "vantui/col/index",
+    "van-button":"vantui/button/index",
+    "van-icon": "vantui/icon/index"
+  }
+}

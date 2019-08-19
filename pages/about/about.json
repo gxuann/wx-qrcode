@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-tab": "../../vantui/tab/index",
+    "van-tabs": "../../vantui/tabs/index",
+    "van-tag": "../../vantui/tag/index"
+  }
+}

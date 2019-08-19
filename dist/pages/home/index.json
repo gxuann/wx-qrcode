@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "wxc-cc": "../../packages/@minui/wxc-cc/dist/index"
-  },
-  "navigationBarBackgroundColor": "#efeff4"
-}

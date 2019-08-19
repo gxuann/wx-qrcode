@@ -21,8 +21,8 @@
 
 或者在微信中扫一扫中扫描下面任意二维码即可.
 
-![](https://images.gxuann.cn/archives/gh_db3301df811e_258.jpg)
-![](https://images.gxuann.cn/archives/gh_db3301df811e_258_normal.jpg)
+![](/img/gh_db3301df811e_258.jpg)
+![](/img/gh_db3301df811e_258_normal.jpg)
 
 
 
@@ -33,6 +33,10 @@ MIT
 
 ---
 ## ChangeLog
+
+V4.0<br>
+1.修复二维码生成出错的问题
+2.重新设计界面
 
 V3.3<br>
 1.优化反馈系统<br>

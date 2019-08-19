@@ -1,0 +1,35 @@
+/* pages/scan/scan.wxss */
+.page_head {
+  margin-top: 100rpx;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+}
+
+.page_title {
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.page_desc {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 40rpx;
+}
+
+.scan-pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50rpx;
+  margin-bottom: 30rpx;
+  width: 100%;
+  height: 100%;
+}
+.result-detail{
+  padding:30rpx;
+  width: 95%; 
+  font-size: 25rpx;
+  color: #666;
+}

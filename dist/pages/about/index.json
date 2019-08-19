@@ -1,9 +1,0 @@
-{
-  "usingComponents": {
-    "wxc-flex": "../../packages/@minui/wxc-flex/dist/index",
-    "wxc-label": "../../packages/@minui/wxc-label/dist/index",
-    "wxc-icon": "../../packages/@minui/wxc-icon/dist/index",
-    "wxc-loadmore": "../../packages/@minui/wxc-loadmore/dist/index"
-  },
-  "navigationBarTitleText": "关于&说明"
-}

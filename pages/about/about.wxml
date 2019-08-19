@@ -1,0 +1,53 @@
+<!--pages/about/about.wxml-->
+<view class="aboutHead">
+  <image src="https://images.gxuann.cn/qrcode/gxuann.jpg" class="gxuann"></image>
+  <view>
+    <image src="../../images/foot.png" class="foot"></image>
+  </view>
+</view>
+
+<view class="versionGroup">
+  <view class="versionNum">v4.0</view>
+  <view class="versionDetail">- 修复二维码生成出错的问题</view>
+  <view class="versionDetail">- 重新设计界面</view>
+  <view class="versionNum">v3.6</view>
+  <view class="versionDetail">- 修复生成失败的问题</view>
+  <view class="versionNum">v3.5</view>
+  <view class="versionDetail">- 修复反馈系统</view>
+  <view class="versionNum">v3.4</view>
+  <view class="versionDetail">- 反馈系统接入「吐个槽社区」</view>
+  <view class="versionNum">v3.3</view>
+  <view class="versionDetail">- 优化反馈功能</view>
+  <view class="versionDetail">- 增加无网络情况下的提示</view>
+  <view class="versionNum">v3.2</view>
+  <view class="versionDetail">- 添加启动页</view>
+  <view class="versionNum">v3.1</view>
+  <view class="versionDetail">- 生成二维码的内容里支持emoji了</view>
+  <view class="versionNum">v3.0</view>
+  <view class="versionDetail">- 重新设计了界面:结合使用了MinUI & WeUI</view>
+  <view class="versionDetail">- 添加了扫描二维码的功能</view>
+  <view class="versionNum">v2.8</view>
+  <view class="versionDetail">- 更新了分享页面的图片</view>
+  <view class="versionNum">v2.7</view>
+  <view class="versionDetail">- 删除图片水印</view>
+  <view class="versionNum">v2.6</view>
+  <view class="versionDetail">- 修复bug:空内容生成(null)的二维码</view>
+  <view class="versionNum">v2.5</view>
+  <view class="versionDetail">- 修复bug:反馈功能提交失败</view>
+  <view class="versionNum">v2.4</view>
+  <view class="versionDetail">- 细节调整</view>
+  <view class="versionNum">v2.3</view>
+  <view class="versionDetail">- 添加反馈功能</view>
+  <view class="versionNum">v2.2</view>
+  <view class="versionDetail">- 修复bug:ShowLoading显示问题</view>
+  <view class="versionDetail">- 修改界面</view>
+  <view class="versionNum">v2.1</view>
+  <view class="versionDetail">- 修复bug:</view>
+  <view class="versionNum">v2.0</view>
+  <view class="versionDetail">- 添加图片保存功能</view>
+  <view class="versionDetail">- 添加图片预览功能</view>
+  <view class="versionNum">v1.1</view>
+  <view class="versionDetail">- 纠正文本错误</view>
+  <view class="versionNum">v1.0</view>
+  <view class="versionDetail">- 二维码暂不可保存，请截图保存</view>
+</view>

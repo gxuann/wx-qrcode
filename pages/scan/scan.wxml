@@ -1,0 +1,12 @@
+<!--pages/scan/scan.wxml-->
+<scroll-view >
+<view class="page_head">
+    <view class="page_title">扫描二维码</view>
+    <view class="page_desc">点击即可扫描，扫描成功后结果会显示在下面的文本框内</view>
+</view>
+
+<van-icon class="scan-pic" name="scan" size="150rpx" color="#ff5349" bind:click="camrea"/>
+<van-panel title="以下是扫描结果" status="{{rsSta}}">
+  <scroll-view scroll-y class="result-detail">{{rs}}</scroll-view>
+</van-panel>
+</scroll-view>

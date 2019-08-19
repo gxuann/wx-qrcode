@@ -1,0 +1,15 @@
+<!--pages/img/img.wxml-->
+<view class="page_head">
+    <view class="page_title">确认结果</view>
+    <view class="page_desc">需要转换的数据和二维码如下</view>
+</view>
+
+<van-panel title="数据&二维码" desc="以下是刚才您输入的数据和生成的二维码" use-footer-slot>
+  <view class="content">{{resData}}</view>
+  <view class="qrcode">
+    <image class="qr-img" src="{{imgUrl}}"></image>
+  </view>
+  <view slot="footer" class="footer">
+    <van-button size="small" type="info" bind:click="save" disabled="{{btnSta}}">{{btnText}}</van-button>
+  </view>
+</van-panel>

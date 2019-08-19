@@ -1,0 +1,15 @@
+<!--pages/generate/generate.wxml-->
+<view class="page_head">
+  <view class="page_title">生成二维码</view>
+  <view class="page_desc">填写下面的表单，点击按钮确认后即可生成二维码</view>
+</view>
+<form bindsubmit="formBindsubmit" bindreset="formReset">
+  <view>
+    <textarea class="input-area" name="detail" type="text" maxlength="255" placeholder="请输入要转换的数据（255字符内）" value="{{detail}}"></textarea>
+  </view>
+  <view class="btn-area">
+      <button class="btn-sub cu-btn bg-blue lg" form-type="submit">提交</button>
+      <button class="btn-cln cu-btn bg-white lg" form-type="reset">清空</button>
+  </view>
+</form>
+<van-notify id="van-notify" />

@@ -1,0 +1,45 @@
+/* pages/about/about.wxss */
+
+.aboutHead {
+  font-size: 20rpx;
+  text-align: center;
+  color: #666;
+  margin: 70rpx auto auto auto;
+}
+
+.aboutHead_pic {
+  width: 15rpx;
+  height: 15rpx;
+}
+
+.gxuann {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.foot {
+  width: 197rpx;
+  height: 54rpx;
+}
+
+.version {
+  text-align: center;
+}
+
+.versionGroup {
+  text-align: left;
+  margin-left: 30rpx;
+  color: #666;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.versionNum {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.versionDetail {
+  font-size: 20rpx;
+}
