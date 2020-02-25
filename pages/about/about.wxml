@@ -1,12 +1,16 @@
 <!--pages/about/about.wxml-->
 <view class="aboutHead">
-  <image src="https://images.gxuann.cn/qrcode/gxuann.jpg" class="gxuann"></image>
+  <image src="http://qrcode.gxuann.cn/gxuann.jpg" class="gxuann"></image>
   <view>
     <image src="../../images/foot.png" class="foot"></image>
   </view>
 </view>
 
 <view class="versionGroup">
+  <view class="versionNum">v4.1</view>
+  <view class="versionDetail">- 项目进入最后维护阶段：</view>
+  <view class="versionDetail">- 修正服务端不能生成二维码的问题</view>
+  <view class="versionDetail">- 已按要求添加文本内容过滤功能</view>
   <view class="versionNum">v4.0</view>
   <view class="versionDetail">- 修复二维码生成出错的问题</view>
   <view class="versionDetail">- 重新设计界面</view>
